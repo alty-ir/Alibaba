@@ -19,9 +19,24 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/axios',
+    /* toast */
+    '@nuxtjs/toast',
   ],
+  
+  /* TOAST module configuration
+   */
+  toast: {
+    position: 'top-center',
+    duration: 5000
+  },
+  axios: {
+    baseURL: 'https://localhost:44341', // Used as fallback if no runtime config is provided
+  },
   css:[
     "~/assets/style.css"
+  ],
+  plugins: [
+    { src: '~/plugins/vue-datepicker', ssr: false }, // datepicker plugin here
   ],
   /*
   ** Customize the progress bar color

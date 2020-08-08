@@ -94,12 +94,7 @@
               </a>
             </li>
             <li class="col-xs-4 col-md-2" data-v-fd004460>
-              <a
-                href="/tour"
-                data-test="tour-link"
-                class="nuxt-link-exact-active nuxt-link-active router-link-active"
-                data-v-fd004460
-              >
+              <a href="/tour" data-test="tour-link" data-v-fd004460>
                 <div class="svg-icon-wrapper" data-v-fd004460>
                   <svg
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -133,7 +128,12 @@
               </a>
             </li>
             <li class="col-xs-4 col-md-2" data-v-fd004460>
-              <a href="/hotel" data-test="hotel-link" data-v-fd004460>
+              <a
+                href="/hotel"
+                data-test="hotel-link"
+                class="nuxt-link-exact-active nuxt-link-active router-link-active"
+                data-v-fd004460
+              >
                 <div class="svg-icon-wrapper" data-v-fd004460>
                   <svg
                     width="70px"
@@ -168,9 +168,8 @@
           </ul>
           <div class="row search-container" data-v-fd004460>
             <div class="gap"></div>
-            <form action="#">
-              <div class="col-xs-12 col-md-6 relative searchbar">
-                <!---->
+            <form @submit.prevent="search">
+              <!-- <div class="col-xs-6 col-md-2 relative searchbar">
                 <div class="input-pair">
                   <div class="input-group multitab-picker" data-v-7099b782>
                     <span class="input-group-addon">
@@ -202,7 +201,6 @@
                       <i class="icon icon-location" data-v-ef5e3d2a></i>
                     </span>
                     <div class="multitab-picker__dropdown v-dropdown" data-v-ef5e3d2a>
-                      <!---->
                       <ul class="multitab-picker__items pretty-scroll" data-v-ef5e3d2a></ul>
                       <div class="text-center py-2" data-v-ef5e3d2a>موردی یافت نشد.</div>
                       <div data-v-ef5e3d2a></div>
@@ -215,6 +213,26 @@
                       data-v-ef5e3d2a
                     />
                   </div>
+                </div>
+              </div>-->
+              <div class="col-xs-12 col-md-4 search-date">
+                <div is-destination="true" class="input-group multitab-picker" data-v-ef5e3d2a>
+                  <span class="input-group-addon">
+                    <i class="icon icon-location" data-v-ef5e3d2a></i>
+                  </span>
+                  <div class="multitab-picker__dropdown v-dropdown" data-v-ef5e3d2a>
+                    <ul class="multitab-picker__items pretty-scroll" data-v-ef5e3d2a></ul>
+                    <div class="text-center py-2" data-v-ef5e3d2a>موردی یافت نشد.</div>
+                    <div data-v-ef5e3d2a></div>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="جستجوی مقصد یا هتل (داخلی و خارجی)"
+                    v-model="searchd.City"
+                    tabindex="2"
+                    class="form-control"
+                    data-v-ef5e3d2a
+                  />
                 </div>
               </div>
               <div class="col-xs-12 col-md-2 search-date">
@@ -230,199 +248,71 @@
                     <span class="input-group-addon" data-v-65b601f8>
                       <i slot="icon" class="icon icon-calendar" data-v-65b601f8></i>
                     </span>
-                    <input
+
+                    <client-only>
+                      <vc-date-picker
+                        placeholder="زمان اقامت"
+                        tabindex="3"
+                        value
+                        class="form-control"
+                        data-v-65b601f8
+                        v-model="attrs"
+                        color="red"
+                        is-dark
+                      />
+                    </client-only>
+                    <!-- <input
                       type="text"
-                      placeholder="زمان تور"
+                      placeholder="زمان اقامت"
                       tabindex="3"
                       value
                       class="form-control"
                       data-v-65b601f8
-                    />
-                  </div>
-                  <div class="clearfix" data-v-65b601f8></div>
-                  <!---->
-                  <div class="alibaba-datepicker__wrapper v-dropdown fade" data-v-65b601f8>
-                    <aside
-                      class="alibaba-datepicker__sidebar font-13 w-normal text-darker"
-                      data-v-65b601f8
-                    >
-                      <h6 class="mt-0 pb-2 font-13 w-normal" data-v-65b601f8>بازه های پر تردد</h6>
-                      <div
-                        class="text-center mt-3"
-                        data-v-65b601f8
-                      >لطفا ابتدا مبدا و مقصد را انتخاب کنید.</div>
-                    </aside>
-                    <div class="flex-1 relative" data-v-65b601f8>
-                      <header class="alibaba-datepicker__header rtl" data-v-65b601f8>
-                        <div data-v-65b601f8>
-                          <button
-                            data-test="datepickerChangeMode"
-                            type="button"
-                            class="btn btn-raw active"
-                            data-v-65b601f8
-                          >
-                            <span class="pull-right" data-v-65b601f8>
-                              تغییر به
-                              میلادی
-                            </span>
-                          </button>
-                          <span
-                            data-test="datepickerMode"
-                            class="w-normal px-2 text-center"
-                            data-v-65b601f8
-                          >تقویم شمسی</span>
-                          <span data-v-65b601f8>
-                            <button
-                              data-test="datepickerGoToday"
-                              type="button"
-                              class="btn btn-raw btn-today hidden-xs pull-left"
-                              data-v-65b601f8
-                            >برو به امروز</button>
-                            <button
-                              data-test="datepickerClose"
-                              type="button"
-                              class="close visible-xs"
-                              data-v-65b601f8
-                            >
-                              <span class="svg-icon" data-v-65b601f8>
-                                <svg
-                                  width="17px"
-                                  height="17px"
-                                  viewBox="0 0 17 17"
-                                  version="1.1"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                  data-v-65b601f8
-                                >
-                                  <g
-                                    stroke="none"
-                                    stroke-width="1"
-                                    fill="none"
-                                    fill-rule="evenodd"
-                                  >
-                                    <g transform="translate(-25.000000, -18.000000)">
-                                      <g transform="translate(0.000000, 1.000000)">
-                                        <g transform="translate(0.000000, 15.000000)">
-                                          <g transform="translate(25.000000, 2.000000)">
-                                            <rect
-                                              x="0"
-                                              y="0"
-                                              width="16.6666667"
-                                              height="16.6666667"
-                                            />
-                                            <path
-                                              d="M9.0699029,8.33333333 L16.5141181,15.7775486 C16.7175162,15.9809466 16.7175162,16.31072 16.5141181,16.5141181 C16.31072,16.7175162 15.9809466,16.7175162 15.7775486,16.5141181 L8.33333333,9.0699029 L0.889118115,16.5141181 C0.685720047,16.7175162 0.35594662,16.7175162 0.152548551,16.5141181 C-0.0508495172,16.31072 -0.0508495172,15.9809466 0.152548551,15.7775486 L7.59676377,8.33333333 L0.152548551,0.889118115 C-0.0508495172,0.685720047 -0.0508495172,0.35594662 0.152548551,0.152548551 C0.35594662,-0.0508495172 0.685720047,-0.0508495172 0.889118115,0.152548551 L8.33333333,7.59676377 L15.7775486,0.152548551 C15.9809466,-0.0508495172 16.31072,-0.0508495172 16.5141181,0.152548551 C16.7175162,0.35594662 16.7175162,0.685720047 16.5141181,0.889118115 L9.0699029,8.33333333 Z"
-                                              fill="#9E9E9E"
-                                              fill-rule="nonzero"
-                                            />
-                                          </g>
-                                        </g>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </svg>
-                              </span>
-                            </button>
-                          </span>
-                        </div>
-                        <!---->
-                      </header>
-                      <!---->
-                      <div class="alibaba-datepicker__arrows hidden-xs" data-v-65b601f8>
-                        <button
-                          type="button"
-                          disabled="disabled"
-                          data-test="datepickerPreviousMonth"
-                          class="btn"
-                          data-v-65b601f8
-                        >
-                          <svg
-                            width="10px"
-                            height="9px"
-                            fill="currentColor"
-                            viewBox="0 0 10 9"
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            class="block"
-                            data-v-65b601f8
-                          >
-                            <g stroke="none" stroke-width="1" fill-rule="evenodd">
-                              <g
-                                transform="translate(-891.000000, -614.000000)"
-                                fill-rule="nonzero"
-                              >
-                                <g transform="translate(376.000000, 547.000000)">
-                                  <g transform="translate(510.000000, 62.000000)">
-                                    <path
-                                      d="M11.6604348,5.23588598 L14.8336263,9.06309507 L14.7652174,8.99686061 C14.7962499,9.02278001 14.8242801,9.05097896 14.8492665,9.08101169 L14.8720021,9.11029229 L14.8720021,9.11029229 L14.885,9.13 L14.8924536,9.13923358 C14.8996065,9.15009347 14.9064091,9.16113092 14.9128598,9.17232874 L14.9176246,9.18193403 L14.9176246,9.18193403 C14.9253373,9.19534632 14.9324305,9.20907617 14.9389856,9.22308616 C14.944727,9.23497938 14.94989,9.24703455 14.9546797,9.25921274 L14.9497106,9.24737076 C14.9537629,9.25811158 14.958005,9.2691225 14.9619366,9.28021093 C14.9694339,9.30014871 14.975549,9.32045932 14.9806836,9.34116098 C14.9832691,9.35330177 14.9859583,9.36565399 14.988286,9.3780534 C14.9921992,9.39665421 14.9949129,9.4156006 14.9968024,9.43479169 C14.9976374,9.44744792 14.998502,9.45985136 14.9990161,9.47226028 L14.9998017,9.48595501 L14.9998017,9.48595501 L15,9.50009883 L14.9999909,9.52178254 C14.9995878,9.53419019 14.9988339,9.54659438 14.9977276,9.55897904 L15,9.50009883 C15,9.54607857 14.9952888,9.5909447 14.9863242,9.63423773 L14.9851635,9.64085801 C14.9832844,9.64602709 14.9804434,9.6580185 14.9772653,9.66993056 C14.9714389,9.69412895 14.9636141,9.71786664 14.9545197,9.74095911 C14.9514858,9.74713603 14.9489078,9.75340808 14.9462302,9.75964438 C14.9366357,9.78332785 14.9251226,9.80623728 14.9123599,9.82832685 L14.8985385,9.85030904 L14.8985385,9.85030904 L14.8727875,9.88848956 C14.8652421,9.89870988 14.8573568,9.90877275 14.8491304,9.91866384 L11.6608696,13.7643117 C11.5321739,13.9196914 11.3465217,14 11.1591304,14 C11.0121739,14 10.8643478,13.9502436 10.7426087,13.8485484 C10.4656522,13.6172247 10.4278261,13.2043337 10.6586957,12.9267452 L12.956,10.154 L5.65217391,10.1547886 C5.29173913,10.1547886 5,9.86192405 5,9.50009883 C5,9.1382736 5.29173913,8.84540904 5.65217391,8.84540904 L12.956,8.845 L10.6582609,6.07345246 C10.4278261,5.79542752 10.4656522,5.3825365 10.7421739,5.15164923 C11.0191304,4.91988904 11.4304348,4.95829751 11.6604348,5.23588598 Z M14.8897045,9.13509429 L14.885,9.13 L14.8717517,9.10962825 C14.8779571,9.11799734 14.8839416,9.12648891 14.8897045,9.13509429 Z"
-                                    />
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </svg>
-                        </button>
-                        <button
-                          type="button"
-                          disabled="disabled"
-                          data-test="datepickerNextMonth"
-                          class="btn"
-                          data-v-65b601f8
-                        >
-                          <svg
-                            width="10px"
-                            height="9px"
-                            fill="currentColor"
-                            viewBox="0 0 10 9"
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            class="mirror-x block"
-                            data-v-65b601f8
-                          >
-                            <g stroke="none" stroke-width="1" fill-rule="evenodd">
-                              <g
-                                transform="translate(-891.000000, -614.000000)"
-                                fill-rule="nonzero"
-                              >
-                                <g transform="translate(376.000000, 547.000000)">
-                                  <g transform="translate(510.000000, 62.000000)">
-                                    <path
-                                      d="M11.6604348,5.23588598 L14.8336263,9.06309507 L14.7652174,8.99686061 C14.7962499,9.02278001 14.8242801,9.05097896 14.8492665,9.08101169 L14.8720021,9.11029229 L14.8720021,9.11029229 L14.885,9.13 L14.8924536,9.13923358 C14.8996065,9.15009347 14.9064091,9.16113092 14.9128598,9.17232874 L14.9176246,9.18193403 L14.9176246,9.18193403 C14.9253373,9.19534632 14.9324305,9.20907617 14.9389856,9.22308616 C14.944727,9.23497938 14.94989,9.24703455 14.9546797,9.25921274 L14.9497106,9.24737076 C14.9537629,9.25811158 14.958005,9.2691225 14.9619366,9.28021093 C14.9694339,9.30014871 14.975549,9.32045932 14.9806836,9.34116098 C14.9832691,9.35330177 14.9859583,9.36565399 14.988286,9.3780534 C14.9921992,9.39665421 14.9949129,9.4156006 14.9968024,9.43479169 C14.9976374,9.44744792 14.998502,9.45985136 14.9990161,9.47226028 L14.9998017,9.48595501 L14.9998017,9.48595501 L15,9.50009883 L14.9999909,9.52178254 C14.9995878,9.53419019 14.9988339,9.54659438 14.9977276,9.55897904 L15,9.50009883 C15,9.54607857 14.9952888,9.5909447 14.9863242,9.63423773 L14.9851635,9.64085801 C14.9832844,9.64602709 14.9804434,9.6580185 14.9772653,9.66993056 C14.9714389,9.69412895 14.9636141,9.71786664 14.9545197,9.74095911 C14.9514858,9.74713603 14.9489078,9.75340808 14.9462302,9.75964438 C14.9366357,9.78332785 14.9251226,9.80623728 14.9123599,9.82832685 L14.8985385,9.85030904 L14.8985385,9.85030904 L14.8727875,9.88848956 C14.8652421,9.89870988 14.8573568,9.90877275 14.8491304,9.91866384 L11.6608696,13.7643117 C11.5321739,13.9196914 11.3465217,14 11.1591304,14 C11.0121739,14 10.8643478,13.9502436 10.7426087,13.8485484 C10.4656522,13.6172247 10.4278261,13.2043337 10.6586957,12.9267452 L12.956,10.154 L5.65217391,10.1547886 C5.29173913,10.1547886 5,9.86192405 5,9.50009883 C5,9.1382736 5.29173913,8.84540904 5.65217391,8.84540904 L12.956,8.845 L10.6582609,6.07345246 C10.4278261,5.79542752 10.4656522,5.3825365 10.7421739,5.15164923 C11.0191304,4.91988904 11.4304348,4.95829751 11.6604348,5.23588598 Z M14.8897045,9.13509429 L14.885,9.13 L14.8717517,9.10962825 C14.8779571,9.11799734 14.8839416,9.12648891 14.8897045,9.13509429 Z"
-                                    />
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </svg>
-                        </button>
-                      </div>
-                      <div class="alibaba-datepicker__container slide-left" data-v-65b601f8></div>
-                      <hr class="hidden-xs mb-1 mt-0" data-v-65b601f8 />
-                      <footer class="alibaba-datepicker__footer rtl" data-v-65b601f8>
-                        <div data-v-65b601f8>
-                          <p
-                            class="text-black w-500 font-12 m-0 hidden-xs"
-                            data-v-65b601f8
-                          >تاریخ انتخابی شما:</p>
-                          <em data-v-65b601f8>---</em>
-                        </div>
-                        <div data-v-65b601f8>
-                          <button
-                            type="button"
-                            disabled="disabled"
-                            class="btn btn-block btn-orange py-1 w-500"
-                            style="min-width: 90px;"
-                            data-v-65b601f8
-                          >تایید</button>
-                        </div>
-                      </footer>
-                    </div>
+                    />-->
                   </div>
                 </div>
               </div>
               <div class="col-xs-12 col-md-2 search-date">
+                <div is-destination="true" class="input-group multitab-picker" data-v-ef5e3d2a>
+                  <span class="input-group-addon">
+                    <i class="icon icon-passenger" data-v-ef5e3d2a></i>
+                  </span>
+                  <div class="multitab-picker__dropdown v-dropdown" data-v-ef5e3d2a>
+                    <ul class="multitab-picker__items pretty-scroll" data-v-ef5e3d2a></ul>
+                    <div class="text-center py-2" data-v-ef5e3d2a>موردی یافت نشد.</div>
+                    <div data-v-ef5e3d2a></div>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="بزرگسال"
+                    tabindex="2"
+                    v-model="searchd.Adult"
+                    class="form-control"
+                    data-v-ef5e3d2a
+                  />
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-2 search-date">
+                <div is-destination="true" class="input-group multitab-picker" data-v-ef5e3d2a>
+                  <span class="input-group-addon">
+                    <i class="icon icon-passenger" data-v-ef5e3d2a></i>
+                  </span>
+                  <div class="multitab-picker__dropdown v-dropdown" data-v-ef5e3d2a>
+                    <ul class="multitab-picker__items pretty-scroll" data-v-ef5e3d2a></ul>
+                    <div class="text-center py-2" data-v-ef5e3d2a>موردی یافت نشد.</div>
+                    <div data-v-ef5e3d2a></div>
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="کودک"
+                    v-model="searchd.Kid"
+                    tabindex="2"
+                    class="form-control"
+                    data-v-ef5e3d2a
+                  />
+                </div>
+              </div>
+              <!-- <div class="col-xs-12 col-md-2 search-date">
                 <div class="input-group" data-v-03ced2b4>
                   <span class="input-group-addon" data-v-03ced2b4>
                     <i class="icon icon-passenger" data-v-03ced2b4></i>
@@ -431,7 +321,7 @@
                     <div class="p-2 clearfix" data-v-03ced2b4>
                       <div class="search-passengers-room" data-v-cb81412c data-v-03ced2b4>
                         <div class="p-2" data-v-cb81412c>
-                          <!---->
+                          
                           <h5 class="inline text-orange w-500" data-v-cb81412c>اتاق اول</h5>
                         </div>
                         <div class="p-1 clearfix" data-v-cb81412c>
@@ -460,7 +350,7 @@
                             <span class="style-btn-decrease inline-block" data-v-cb81412c></span>
                           </div>
                         </div>
-                        <!---->
+                        
                       </div>
                       <hr class="my-0" data-v-03ced2b4 />
                       <div class="m-2 mt-3" data-v-03ced2b4>
@@ -487,7 +377,7 @@
                     data-v-03ced2b4
                   />
                 </div>
-              </div>
+              </div>-->
               <div class="col-xs-12 col-md-2">
                 <button
                   type="submit"
@@ -569,7 +459,67 @@
 
       <div class="headline text-center mb-2 text-darker">
         <h1 class="w-300 m-0">رزرو هتل</h1>
-        <br />
+      </div>
+
+      <div class="headline text-center mb-2 text-darker" v-bind="showR">
+        <h2 class="w-500 m-0">نتایج جستوجو</h2>
+      </div>
+      <section data-v-f1c6aa14  v-bind="showR" class="c-popular-hotel-section mb-3">
+        <div data-v-f1c6aa14 class="container">
+          
+          <div data-v-f1c6aa14 class="row">
+            <div
+              data-v-f1c6aa14
+              v-for="res in this.resultH"
+              :key="res.id"
+              class="col-xs-12 col-sm-6 col-md-4"
+            >
+              <div data-v-a62baf82 data-v-f1c6aa14 class="c-popular-hotel-card">
+                <a data-v-a62baf82 rel="nofollow">
+                  <div
+                    data-v-a62baf82
+                    class="card-image"
+                    :style="'background-image: url('+res.pic[0].url+');'"
+                  >
+                    <div data-v-a62baf82 class="card-overlay">
+                      <div data-v-a62baf82 class="card-rate">
+                        <div data-v-a62baf82 class="rate-number font-16">{{hotel.city}}</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div data-v-a62baf82 class="card-content">
+                    <div
+                      data-v-a62baf82
+                      class="flex flex-justify-space-between flex-align-center rtl font-en"
+                    >
+                      <p
+                        data-v-a62baf82
+                        class="text-ellipsis text-darker w-500 font-16 m-0"
+                      >{{ hotel.name }}</p>
+                      
+                    </div>
+                    <hr data-v-a62baf82 class="mt-2" />
+                    <div data-v-a62baf82 class="flex flex-justify-space-between flex-align-center">
+                      <div data-v-a62baf82>
+                        {{hotel.address}}
+                      </div>
+                      <nuxt-link :to="'/Hotel/'+hotel.id">
+                        <button data-v-a62baf82 class="btn btn-primary content-btn mt-3">
+                          مشاهده و
+                          رزرو
+                        </button>
+                      </nuxt-link>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="headline text-center mb-2 text-darker">        
         <h2 class="w-500 m-0">هتل های خارجی</h2>
       </div>
       <section data-v-f1c6aa14 class="c-popular-hotel-section mb-3">
@@ -691,12 +641,13 @@
                           data-v-a62baf82
                           class="text-blue"
                         >{{hotel.price.toLocaleString()}} ریال</strong>
-                      </div>                        <nuxt-link :to="'/Hotel/'+hotel._id">
-
-                      <button data-v-a62baf82 class="btn btn-primary content-btn mt-3">
-                        مشاهده و
-                        رزرو
-                      </button></nuxt-link>
+                      </div>
+                      <nuxt-link :to="'/Hotel/'+hotel._id">
+                        <button data-v-a62baf82 class="btn btn-primary content-btn mt-3">
+                          مشاهده و
+                          رزرو
+                        </button>
+                      </nuxt-link>
                     </div>
                   </div>
                 </a>
@@ -714,8 +665,72 @@ export default {
   data() {
     return {
       form: "login",
-      hotels: [{"_id":1,"name":"Antik Istanbul","stars":4,"price":5612000,"image":"https://cdn.alibaba.ir/inh/images/hotel/4461/113287944.jpg","rate_number":8.3,"rate_desc":"بسیار عالی"},{"_id":0,"name":"Akgün Istanbul","stars":5,"price":0,"image":"https://cdn.alibaba.ir/inh/images/hotel/4460/01c73e53.jpg","rate_number":0,"rate_desc":""},{"_id":2,"name":"Black Bird Hotel- Istanbul","stars":4,"price":4554000,"image":"https://cdn.alibaba.ir/inh/images/hotel/4463/01e9d4fd.jpg","rate_number":-1,"rate_desc":""},{"_id":3,"name":"Carlton Hotel","stars":4,"price":5507000,"image":"https://cdn.alibaba.ir/inh/images/hotel/4464/0a56b477.jpg","rate_number":-1,"rate_desc":""},{"_id":4,"name":"Intercontinental Istanbul","stars":5,"price":12063000,"image":"https://cdn.alibaba.ir/inh/images/hotel/4465/004b51a5.jpg","rate_number":9,"rate_desc":"فوق العاده"},{"_id":5,"name":"Conrad Istanbul Bosphorus","stars":5,"price":11991000,"image":"https://cdn.alibaba.ir/inh/images/hotel/4466/00421bc2.jpg","rate_number":-1,"rate_desc":""}],
-      city: "istanbul"
+      showR:false,
+      searchd:{
+        City:"",
+        Date:"",
+        Adult:1,
+        Kid:0
+      },
+      resultH:[],
+      attrs: new Date(),
+      hotels: [
+        {
+          _id: 1,
+          name: "Antik Istanbul",
+          stars: 4,
+          price: 5612000,
+          image: "https://cdn.alibaba.ir/inh/images/hotel/4461/113287944.jpg",
+          rate_number: 8.3,
+          rate_desc: "بسیار عالی",
+        },
+        {
+          _id: 0,
+          name: "Akgün Istanbul",
+          stars: 5,
+          price: 0,
+          image: "https://cdn.alibaba.ir/inh/images/hotel/4460/01c73e53.jpg",
+          rate_number: 0,
+          rate_desc: "",
+        },
+        {
+          _id: 2,
+          name: "Black Bird Hotel- Istanbul",
+          stars: 4,
+          price: 4554000,
+          image: "https://cdn.alibaba.ir/inh/images/hotel/4463/01e9d4fd.jpg",
+          rate_number: -1,
+          rate_desc: "",
+        },
+        {
+          _id: 3,
+          name: "Carlton Hotel",
+          stars: 4,
+          price: 5507000,
+          image: "https://cdn.alibaba.ir/inh/images/hotel/4464/0a56b477.jpg",
+          rate_number: -1,
+          rate_desc: "",
+        },
+        {
+          _id: 4,
+          name: "Intercontinental Istanbul",
+          stars: 5,
+          price: 12063000,
+          image: "https://cdn.alibaba.ir/inh/images/hotel/4465/004b51a5.jpg",
+          rate_number: 9,
+          rate_desc: "فوق العاده",
+        },
+        {
+          _id: 5,
+          name: "Conrad Istanbul Bosphorus",
+          stars: 5,
+          price: 11991000,
+          image: "https://cdn.alibaba.ir/inh/images/hotel/4466/00421bc2.jpg",
+          rate_number: -1,
+          rate_desc: "",
+        },
+      ],
+      city: "istanbul",
     };
   },
   methods: {
@@ -723,20 +738,42 @@ export default {
       let headers = {
         //Authorization: "bearer " + state.user.token,
         "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       };
       let url = "http://37.152.185.50:8080/hotels/" + name;
       await this.$axios({
         method: "get",
         headers: headers,
-        url: url
+        url: url,
       })
-        .then(data => {
+        .then((data) => {
           this.hotels = data.data;
           this.city = name;
         })
-        .catch(e => console.log(e));
-    }
-  }
+        .catch((e) => console.log(e));
+    },
+     async search(name) {
+      this.showR = true;
+      await this.$axios({
+        method: "get",
+        params:this.searchd,
+        url: "hotels/search"
+      })
+        .then((data) => {
+                   this.$toast.success("Successful search");
+                   this.resultH=data.data
+          console.log(data.data[0])
+        })
+        .catch((e) => {
+            console.log(e)
+            this.$toast.error(e);
+        });
+    },
+  },
 };
 </script>
+<style>
+.vc-w-full {
+  border: 0px !important;
+}
+</style>

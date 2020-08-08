@@ -19,14 +19,14 @@
                 rel="nofollow"
                 data-v-085350a8
                 class
-              >هتل&zwnj;های استانبول</a>
+              >هتل&zwnj;های {{hotel.city}}</a>
             </li>
             <li aria-hidden="true" class="common-breadcrumbs__seperator" data-v-085350a8>/</li>
             <li
               class="common-breadcrumbs__breadcrumb common-breadcrumbs__breadcrumb--active"
               data-v-085350a8
             >
-              <span data-v-085350a8>Akgün Istanbul</span>
+              <span data-v-085350a8>{{hotel.name}}</span>
             </li>
             <!---->
           </ol>
@@ -47,7 +47,7 @@
                   <a
                     href="#poi-section"
                     class="text-dark font-en"
-                  >Adnan Menderes Bulv., Istanbul, Turkey</a>
+                  >{{hotel.address}}</a>
                   <a href="#poi-section" class="btn btn-link text-blue">
                     <span class="hotel-detail-pin">
                       <svg
@@ -162,233 +162,9 @@
                     </div>
                     <div data-v-638cc802>
                       <div
+                      v-for="p in hotel.pic" :key="p.id"
                         class="hv-image img-rounded"
-                        style="background-image:url(https://cdn.alibaba.ir/inh/images/hotel/4460/01c73e53.jpg) ;"
-                        data-v-638cc802
-                      >
-                        <div data-v-638cc802>
-                          <span class="inline-block v-middle" data-v-638cc802>
-                            <span class="svg-icon block" data-v-638cc802>
-                              <svg
-                                viewBox="0 0 22 13"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                fill
-                                width="22px"
-                                height="13px"
-                                class="svg-icon"
-                                data-v-638cc802
-                              >
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g
-                                    id="Tour-Detail-[if-select-2room]---Desktop"
-                                    transform="translate(-1095.000000, -1777.000000)"
-                                    fill="currentColor"
-                                    fill-rule="nonzero"
-                                  >
-                                    <g
-                                      id="Group-13"
-                                      transform="translate(607.000000, 1532.000000)"
-                                    >
-                                      <path
-                                        d="M498.9944,245 C493.937949,245.003931 489.443175,247.501581 488.033392,251.313119 C487.988869,251.433399 487.988869,251.566591 488.033392,251.686871 C489.444349,255.501583 493.944973,257.999754 499.005624,258 C504.062076,257.996069 508.556825,255.498419 509.966608,251.686871 C510.011131,251.566591 510.011131,251.433399 509.966608,251.313119 C508.55565,247.498417 504.055052,245.000246 498.9944,245 Z M499.000164,247.080003 C501.338501,247.080003 503.250187,249.068135 503.250187,251.499995 C503.250187,253.931855 501.338501,255.919997 499.000164,255.919997 C496.661827,255.919997 494.750142,253.931855 494.750142,251.499995 C494.750142,249.068135 496.661827,247.080003 499.000164,247.080003 Z M499.000164,248.640002 C497.472481,248.640002 496.25015,249.911223 496.25015,251.499995 C496.25015,253.088767 497.472481,254.359998 499.000164,254.359998 C500.527847,254.359998 501.750179,253.088767 501.750179,251.499995 C501.750179,249.911223 500.527847,248.640002 499.000164,248.640002 Z"
-                                        id="Shape"
-                                      />
-                                    </g>
-                                  </g>
-                                </g>
-                              </svg>
-                            </span>
-                            <span class="block hidden-xs" data-v-638cc802>مشاهده</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-v-638cc802>
-                      <div
-                        class="hv-image img-rounded"
-                        style="background-image:url(https://cdn.alibaba.ir/inh/images/hotel/4460/021323ea.jpg) ;"
-                        data-v-638cc802
-                      >
-                        <div data-v-638cc802>
-                          <span class="inline-block v-middle" data-v-638cc802>
-                            <span class="svg-icon block" data-v-638cc802>
-                              <svg
-                                viewBox="0 0 22 13"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                fill
-                                width="22px"
-                                height="13px"
-                                class="svg-icon"
-                                data-v-638cc802
-                              >
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g
-                                    id="Tour-Detail-[if-select-2room]---Desktop"
-                                    transform="translate(-1095.000000, -1777.000000)"
-                                    fill="currentColor"
-                                    fill-rule="nonzero"
-                                  >
-                                    <g
-                                      id="Group-13"
-                                      transform="translate(607.000000, 1532.000000)"
-                                    >
-                                      <path
-                                        d="M498.9944,245 C493.937949,245.003931 489.443175,247.501581 488.033392,251.313119 C487.988869,251.433399 487.988869,251.566591 488.033392,251.686871 C489.444349,255.501583 493.944973,257.999754 499.005624,258 C504.062076,257.996069 508.556825,255.498419 509.966608,251.686871 C510.011131,251.566591 510.011131,251.433399 509.966608,251.313119 C508.55565,247.498417 504.055052,245.000246 498.9944,245 Z M499.000164,247.080003 C501.338501,247.080003 503.250187,249.068135 503.250187,251.499995 C503.250187,253.931855 501.338501,255.919997 499.000164,255.919997 C496.661827,255.919997 494.750142,253.931855 494.750142,251.499995 C494.750142,249.068135 496.661827,247.080003 499.000164,247.080003 Z M499.000164,248.640002 C497.472481,248.640002 496.25015,249.911223 496.25015,251.499995 C496.25015,253.088767 497.472481,254.359998 499.000164,254.359998 C500.527847,254.359998 501.750179,253.088767 501.750179,251.499995 C501.750179,249.911223 500.527847,248.640002 499.000164,248.640002 Z"
-                                        id="Shape"
-                                      />
-                                    </g>
-                                  </g>
-                                </g>
-                              </svg>
-                            </span>
-                            <span class="block hidden-xs" data-v-638cc802>مشاهده</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-v-638cc802>
-                      <div
-                        class="hv-image img-rounded"
-                        style="background-image:url(https://cdn.alibaba.ir/inh/images/hotel/4460/072edacc.jpg) ;"
-                        data-v-638cc802
-                      >
-                        <div data-v-638cc802>
-                          <span class="inline-block v-middle" data-v-638cc802>
-                            <span class="svg-icon block" data-v-638cc802>
-                              <svg
-                                viewBox="0 0 22 13"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                fill
-                                width="22px"
-                                height="13px"
-                                class="svg-icon"
-                                data-v-638cc802
-                              >
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g
-                                    id="Tour-Detail-[if-select-2room]---Desktop"
-                                    transform="translate(-1095.000000, -1777.000000)"
-                                    fill="currentColor"
-                                    fill-rule="nonzero"
-                                  >
-                                    <g
-                                      id="Group-13"
-                                      transform="translate(607.000000, 1532.000000)"
-                                    >
-                                      <path
-                                        d="M498.9944,245 C493.937949,245.003931 489.443175,247.501581 488.033392,251.313119 C487.988869,251.433399 487.988869,251.566591 488.033392,251.686871 C489.444349,255.501583 493.944973,257.999754 499.005624,258 C504.062076,257.996069 508.556825,255.498419 509.966608,251.686871 C510.011131,251.566591 510.011131,251.433399 509.966608,251.313119 C508.55565,247.498417 504.055052,245.000246 498.9944,245 Z M499.000164,247.080003 C501.338501,247.080003 503.250187,249.068135 503.250187,251.499995 C503.250187,253.931855 501.338501,255.919997 499.000164,255.919997 C496.661827,255.919997 494.750142,253.931855 494.750142,251.499995 C494.750142,249.068135 496.661827,247.080003 499.000164,247.080003 Z M499.000164,248.640002 C497.472481,248.640002 496.25015,249.911223 496.25015,251.499995 C496.25015,253.088767 497.472481,254.359998 499.000164,254.359998 C500.527847,254.359998 501.750179,253.088767 501.750179,251.499995 C501.750179,249.911223 500.527847,248.640002 499.000164,248.640002 Z"
-                                        id="Shape"
-                                      />
-                                    </g>
-                                  </g>
-                                </g>
-                              </svg>
-                            </span>
-                            <span class="block hidden-xs" data-v-638cc802>مشاهده</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-v-638cc802>
-                      <div
-                        class="hv-image img-rounded"
-                        style="background-image:url(https://cdn.alibaba.ir/inh/images/hotel/4460/0838a838.jpg) ;"
-                        data-v-638cc802
-                      >
-                        <div data-v-638cc802>
-                          <span class="inline-block v-middle" data-v-638cc802>
-                            <span class="svg-icon block" data-v-638cc802>
-                              <svg
-                                viewBox="0 0 22 13"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                fill
-                                width="22px"
-                                height="13px"
-                                class="svg-icon"
-                                data-v-638cc802
-                              >
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g
-                                    id="Tour-Detail-[if-select-2room]---Desktop"
-                                    transform="translate(-1095.000000, -1777.000000)"
-                                    fill="currentColor"
-                                    fill-rule="nonzero"
-                                  >
-                                    <g
-                                      id="Group-13"
-                                      transform="translate(607.000000, 1532.000000)"
-                                    >
-                                      <path
-                                        d="M498.9944,245 C493.937949,245.003931 489.443175,247.501581 488.033392,251.313119 C487.988869,251.433399 487.988869,251.566591 488.033392,251.686871 C489.444349,255.501583 493.944973,257.999754 499.005624,258 C504.062076,257.996069 508.556825,255.498419 509.966608,251.686871 C510.011131,251.566591 510.011131,251.433399 509.966608,251.313119 C508.55565,247.498417 504.055052,245.000246 498.9944,245 Z M499.000164,247.080003 C501.338501,247.080003 503.250187,249.068135 503.250187,251.499995 C503.250187,253.931855 501.338501,255.919997 499.000164,255.919997 C496.661827,255.919997 494.750142,253.931855 494.750142,251.499995 C494.750142,249.068135 496.661827,247.080003 499.000164,247.080003 Z M499.000164,248.640002 C497.472481,248.640002 496.25015,249.911223 496.25015,251.499995 C496.25015,253.088767 497.472481,254.359998 499.000164,254.359998 C500.527847,254.359998 501.750179,253.088767 501.750179,251.499995 C501.750179,249.911223 500.527847,248.640002 499.000164,248.640002 Z"
-                                        id="Shape"
-                                      />
-                                    </g>
-                                  </g>
-                                </g>
-                              </svg>
-                            </span>
-                            <span class="block hidden-xs" data-v-638cc802>مشاهده</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-v-638cc802>
-                      <div
-                        class="hv-image img-rounded"
-                        style="background-image:url(https://cdn.alibaba.ir/inh/images/hotel/4460/0a53a8be.jpg) ;"
-                        data-v-638cc802
-                      >
-                        <div data-v-638cc802>
-                          <span class="inline-block v-middle" data-v-638cc802>
-                            <span class="svg-icon block" data-v-638cc802>
-                              <svg
-                                viewBox="0 0 22 13"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                fill
-                                width="22px"
-                                height="13px"
-                                class="svg-icon"
-                                data-v-638cc802
-                              >
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g
-                                    id="Tour-Detail-[if-select-2room]---Desktop"
-                                    transform="translate(-1095.000000, -1777.000000)"
-                                    fill="currentColor"
-                                    fill-rule="nonzero"
-                                  >
-                                    <g
-                                      id="Group-13"
-                                      transform="translate(607.000000, 1532.000000)"
-                                    >
-                                      <path
-                                        d="M498.9944,245 C493.937949,245.003931 489.443175,247.501581 488.033392,251.313119 C487.988869,251.433399 487.988869,251.566591 488.033392,251.686871 C489.444349,255.501583 493.944973,257.999754 499.005624,258 C504.062076,257.996069 508.556825,255.498419 509.966608,251.686871 C510.011131,251.566591 510.011131,251.433399 509.966608,251.313119 C508.55565,247.498417 504.055052,245.000246 498.9944,245 Z M499.000164,247.080003 C501.338501,247.080003 503.250187,249.068135 503.250187,251.499995 C503.250187,253.931855 501.338501,255.919997 499.000164,255.919997 C496.661827,255.919997 494.750142,253.931855 494.750142,251.499995 C494.750142,249.068135 496.661827,247.080003 499.000164,247.080003 Z M499.000164,248.640002 C497.472481,248.640002 496.25015,249.911223 496.25015,251.499995 C496.25015,253.088767 497.472481,254.359998 499.000164,254.359998 C500.527847,254.359998 501.750179,253.088767 501.750179,251.499995 C501.750179,249.911223 500.527847,248.640002 499.000164,248.640002 Z"
-                                        id="Shape"
-                                      />
-                                    </g>
-                                  </g>
-                                </g>
-                              </svg>
-                            </span>
-                            <span class="block hidden-xs" data-v-638cc802>مشاهده</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-v-638cc802>
-                      <div
-                        class="hv-image img-rounded"
-                        style="background-image:url(https://cdn.alibaba.ir/inh/images/hotel/4460/121eecdb.jpg) ;"
+                        v-bind:style="{ backgroundImage: 'url(' + p.url + ')' }"
                         data-v-638cc802
                       >
                         <div data-v-638cc802>
@@ -587,18 +363,53 @@
                 <!---->
                 <!---->
                 <div data-v-fe9a6372 data-v-21eb7522>
-                  <div class="text-center" data-v-fe9a6372>
-                    <img
-                      src="https://cdn.alibaba.ir/dist/ff4aed11/img/fe48541.svg"
-                      alt="result not found"
-                      data-v-fe9a6372
-                    />
-                    <h4
-                      class="text-orange"
-                      data-v-fe9a6372
-                    >برای مشاهده اتاق ها تاریخ را انتخاب کنید.</h4>
-                  </div>
-                </div>
+   <div data-v-aa6edd58="" class="hotel-detail-room-list__item">
+      <div data-v-712fe31c="" data-v-fb0c0032="" data-v-aa6edd58="" class="common-box">
+         <div data-v-fb0c0032="" data-v-712fe31c="" class="hotel-rooms-card" v-for="r in hotel.room" :key="r.id">
+            <div data-v-fb0c0032="" data-v-712fe31c="" class="hotel-rooms-card__rooms-info">
+               <ul data-v-fb0c0032="" data-v-712fe31c="" class="hotel-rooms-card__room-list">
+                  <li data-v-fb0c0032="" data-v-712fe31c="" class="hotel-rooms-card__room-list__item">
+                     <div data-v-7df3f340="" data-v-fb0c0032="" class="hotel-single-room" data-v-712fe31c="">                        
+                        <div data-v-7df3f340="" class="hotel-single-room__details">
+                           <ul data-v-920a8654="" data-v-7df3f340="" class="room-details flex flex-wrap flex-row flex-justify-start flex-align-stretch">
+                              <li data-v-920a8654="" class="room-details__item room-details__item--services"><span data-v-3224991c="" data-v-920a8654="" class="meal-plan-badge room-details__item--services__badge meal-plan-badge--BB">
+                                 {{r.name}}
+                                 </span> <span data-v-920a8654="" class="room-details__item--services__label">به همراه صبحانه: {{r.breakfast?"هست":"نیست"}}</span>
+                              </li>
+                              <li data-v-920a8654="" class="room-details__item">
+                                 <svg data-v-920a8654="" width="27px" height="27px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" class="room-details__item__icon">
+                                    <g data-v-920a8654="" fill="currentColor" fill-rule="nonzero">
+                                       <path data-v-920a8654="" d="M12,10.5 C14.6233526,10.5 16.75,8.37335256 16.75,5.75 C16.75,3.12664744 14.6233526,1 12,1 C9.37664744,1 7.25,3.12664744 7.25,5.75 C7.25,8.37335256 9.37664744,10.5 12,10.5 Z M12,11.5 C8.82436269,11.5 6.25,8.92563731 6.25,5.75 C6.25,2.57436269 8.82436269,0 12,0 C15.1756373,0 17.75,2.57436269 17.75,5.75 C17.75,8.92563731 15.1756373,11.5 12,11.5 Z M22,24 C22,18.4771525 17.5228475,14 12,14 C6.4771525,14 2,18.4771525 2,24 L1,24 C1,17.9248678 5.92486775,13 12,13 C18.0751322,13 23,17.9248678 23,24 L22.5,24 L22,24 Z"></path>
+                                    </g>
+                                 </svg>
+                                 <span data-v-920a8654="">{{r.adult}}} بزرگسال</span>
+                                 <span data-v-920a8654="">{{r.kid}}} بزرگسال</span>
+                              </li>
+                              <div data-v-920a8654="" class="room-details__break"></div>
+                              
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div data-v-fb0c0032="" data-v-712fe31c="" class="hotel-rooms-card__price-info">
+
+               <div data-v-fb0c0032="" data-v-712fe31c="" class="hotel-rooms-card__price-info__button flex flex-column flex-align-center">
+                  <button data-v-0896e146="" data-v-fb0c0032="" type="button" class="basic-button basic-button--block basic-button--primary" data-v-712fe31c="">
+                     <!----> 
+                     رزرو این اتاق
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div data-v-fb0c0032="" data-v-712fe31c="" class="hotel-rooms-card__refund-policy">
+            <!----> <!---->
+         </div>
+         <!---->
+      </div>
+   </div>
+</div>
               </div>
               <div
                 id="poi-section"
@@ -643,138 +454,7 @@
                   <!---->
                   <div class="col-xs-12 mt-3 px-0">
                     <div class="map vue2leaflet-map-ssr">
-                      <div
-                        class="vue2leaflet-map leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-                        style="position: relative; outline: none;"
-                        tabindex="0"
-                      >
-                        <!---->
-                        <div style="display: none;"></div>
-                        <div
-                          class="leaflet-pane leaflet-map-pane"
-                          style="transform: translate3d(0px, 0px, 0px);"
-                        >
-                          <div class="leaflet-pane leaflet-tile-pane">
-                            <div class="leaflet-layer" style="z-index: 1; opacity: 1;">
-                              <div
-                                class="leaflet-tile-container leaflet-zoom-animated"
-                                style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"
-                              >
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19017/12282.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(369px, -64px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19017/12283.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(369px, 192px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19016/12282.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(113px, -64px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19018/12282.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(625px, -64px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19016/12283.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(113px, 192px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19018/12283.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(625px, 192px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19015/12282.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(-143px, -64px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19019/12282.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(881px, -64px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19015/12283.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(-143px, 192px, 0px); opacity: 1;"
-                                />
-                                <img
-                                  alt
-                                  role="presentation"
-                                  src="https://maps.alibaba.ir/osm-intl/15/19019/12283.png"
-                                  class="leaflet-tile leaflet-tile-loaded"
-                                  style="width: 256px; height: 256px; transform: translate3d(881px, 192px, 0px); opacity: 1;"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="leaflet-pane leaflet-shadow-pane"></div>
-                          <div class="leaflet-pane leaflet-overlay-pane"></div>
-                          <div class="leaflet-pane leaflet-marker-pane">
-                            <img
-                              src="https://cdn.alibaba.ir/dist/ff4aed11/img/62e4341.svg"
-                              class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                              alt
-                              tabindex="0"
-                              style="margin-left: -15px; margin-top: -30px; width: 30px; height: 30px; transform: translate3d(448px, 143px, 0px); z-index: 143;"
-                            />
-                          </div>
-                          <div class="leaflet-pane leaflet-tooltip-pane"></div>
-                          <div class="leaflet-pane leaflet-popup-pane"></div>
-                          <div
-                            class="leaflet-proxy leaflet-zoom-animated"
-                            style="transform: translate3d(4.86843e+06px, 3.1444e+06px, 0px) scale(16384);"
-                          ></div>
-                        </div>
-                        <div class="leaflet-control-container">
-                          <div class="leaflet-top leaflet-left">
-                            <div class="leaflet-control-zoom leaflet-bar leaflet-control">
-                              <a
-                                class="leaflet-control-zoom-in"
-                                href="#"
-                                title="Zoom in"
-                                role="button"
-                                aria-label="Zoom in"
-                              >+</a>
-                              <a
-                                class="leaflet-control-zoom-out"
-                                href="#"
-                                title="Zoom out"
-                                role="button"
-                                aria-label="Zoom out"
-                              >−</a>
-                            </div>
-                          </div>
-                          <div class="leaflet-top leaflet-right"></div>
-                          <div class="leaflet-bottom leaflet-left"></div>
-                          <div class="leaflet-bottom leaflet-right"></div>
-                        </div>
-                      </div>
+                      <iframe :src="hotel.location" width="100%" height="290" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -856,666 +536,7 @@
                         >
                           <p class="mb-0 notice text-darker" data-v-539448ea data-v-1150f8fd>کلی</p>
                           <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>پارکینگ</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>پارکینگ</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>پارکینگ در محل</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>پارکینگ اختصاصی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>وای-فای سراسری</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Activities"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M10.4865771,1.6082913 C12.7986087,1.27418346 15.1557553,1.72115605 17.1836672,2.87603167 L17.1901102,2.84451835 L17.8063968,3.25334088 C20.5096995,5.04661537 22.2227783,7.98123006 22.47085,11.1936529 L22.5,11.188265 L22.4999994,11.8223782 L22.5083739,12.2069733 L22.4969994,12.2083782 L22.4961565,12.2819009 C22.3672253,17.0713523 19.0080338,21.158778 14.3581283,22.2280209 L14.3609556,22.2401855 L13.848,22.3321951 L13.3757837,22.416623 L13.3727062,22.4064339 C12.9182776,22.4669641 12.4598957,22.498238 11.9993484,22.4999996 C9.45206931,22.49668 6.99285449,21.5674775 5.07984842,19.8854996 L5.34099936,20.1063782 L5.33536573,20.1094795 L5.10499936,19.9073782 L5.07984842,19.8854996 L4.52696934,19.3993901 L4.55001735,19.3875271 C3.26848171,18.0966194 2.34311071,16.4934836 1.86687404,14.7350243 L1.8553413,14.7369767 L1.75175723,14.2677915 L1.75175723,14.2677915 L1.63884785,13.7598498 L1.65190721,13.7567979 C1.55322703,13.1772389 1.50237179,12.5899865 1.49999958,12.000102 C1.4990101,7.14997853 4.81597272,2.95040695 9.49121657,1.80198435 L9.49137343,1.79298689 L9.90060484,1.70997898 L9.90060484,1.70997898 L10.4869872,1.59028375 Z M10.2632536,16.8654702 L10.1349571,16.9770259 C9.06028501,17.8781833 7.90879479,18.6829136 6.69389348,19.3820946 L6.69389348,19.3820946 L6.309,19.597 L6.55096844,19.7728041 C8.04671833,20.8239568 9.81870931,21.4241814 11.6533959,21.4932895 L11.6533959,21.4932895 L11.9980822,21.5000037 C12.2786991,21.4989274 12.559004,21.4856622 12.8382073,21.4602801 L12.8382073,21.4602801 L13.138,21.426 L13.1008897,21.290057 C13.0341647,21.066404 12.9593617,20.8457632 12.8767286,20.6285335 C12.8584155,20.5803893 12.8396701,20.5322931 12.8205409,20.4843696 L12.8767286,20.6285335 C12.8347784,20.518253 12.7908102,20.4088516 12.7448565,20.3003816 L12.8205409,20.4843696 C12.772987,20.3652351 12.7230612,20.2471683 12.6708052,20.1302363 L12.7448565,20.3003816 C12.7000934,20.1947222 12.6534464,20.0899464 12.6049453,19.9861026 L12.6708052,20.1302363 C12.6221984,20.0214697 12.5715755,19.9136851 12.5189702,19.8069364 L12.6049453,19.9861026 C12.5507019,19.8699641 12.4941394,19.7549912 12.4352999,19.6412514 L12.5189702,19.8069364 C12.4752535,19.7182248 12.4301677,19.6302288 12.3837322,19.5429792 L12.4352999,19.6412514 C12.3845114,19.5430747 12.3320263,19.4458168 12.2778717,19.3495211 L12.3837322,19.5429792 C12.3267766,19.4359631 12.2677903,19.33007 12.206809,19.2253573 L12.2778717,19.3495211 C12.2194179,19.2455807 12.1590189,19.1427614 12.0967086,19.0411177 L12.206809,19.2253573 C12.1468696,19.1224336 12.0850027,19.0206504 12.0212423,18.9200619 L12.0967086,19.0411177 C12.0397374,18.9481833 11.9811685,18.8562316 11.9210277,18.7653044 L12.0212423,18.9200619 C11.9576416,18.8197254 11.8921567,18.7205778 11.8248213,18.6226729 L11.9210277,18.7653044 C11.8573164,18.668979 11.7918411,18.5738033 11.7246326,18.4798269 L11.8248213,18.6226729 C11.761177,18.5301349 11.6958795,18.4387072 11.628957,18.3484354 L11.7246326,18.4798269 C11.6377024,18.358274 11.5478726,18.2387275 11.45521,18.1212948 L11.628957,18.3484354 C11.5636908,18.2603976 11.4968791,18.1734592 11.4285482,18.0876624 L11.45521,18.1212948 C11.3885579,18.0368256 11.32044,17.9534501 11.2508814,17.8712081 L11.4285482,18.0876624 C11.3544567,17.9946326 11.278579,17.902945 11.2009488,17.8126536 L11.2508814,17.8712081 C11.1648929,17.7695406 11.0767024,17.6696054 10.986357,17.571478 L11.2009488,17.8126536 C11.1238897,17.7230266 11.0451038,17.6347752 10.9646237,17.5479523 L10.986357,17.571478 C10.8187261,17.389408 10.6436761,17.2135617 10.4615068,17.0444212 L10.4615068,17.0444212 C10.3950007,16.982706 10.329567,16.9236567 10.2632536,16.8654702 Z M15.0495155,11.2460689 C15.0462879,11.2513658 15.0430582,11.2566614 15.0398264,11.2619556 L15.0070349,11.3155131 C14.8655764,11.5458618 14.7202257,11.7736357 14.571059,11.9987416 C14.4903582,12.120524 14.4086647,12.2413453 14.3258696,12.3613735 C14.3112327,12.382593 14.2964298,12.4039774 14.2815918,12.4253363 C14.1879916,12.5600665 14.0932789,12.6934044 13.9971995,12.8257199 C13.9441061,12.8988369 13.890624,12.9716033 13.8367277,13.0440543 C13.7704247,13.1331824 13.7035741,13.2217301 13.6361035,13.309795 C13.5812586,13.381381 13.5259599,13.4527045 13.4702538,13.5237051 C13.3943982,13.6203868 13.3178308,13.7164158 13.240516,13.811838 C13.1844668,13.8810153 13.127899,13.9500254 13.0709395,14.0187117 C13.0092926,14.0930486 12.9473609,14.1668017 12.8849762,14.2401735 C12.8156763,14.3216797 12.7456976,14.4028527 12.6751628,14.4835476 C12.6256061,14.5402421 12.5758494,14.5966173 12.5258206,14.6527552 C12.4426383,14.7460915 12.3590072,14.8384425 12.2746372,14.930133 C12.1851954,15.0273368 12.0948055,15.1239218 12.0035919,15.2197518 C11.9766523,15.2480544 11.9497538,15.2761737 11.9227843,15.3042274 L12.0035919,15.2197518 C11.6881192,15.5511907 11.3627932,15.8735973 11.0279848,16.1865176 L11.0356388,16.1924706 L11.0229994,16.2033782 L11.0768999,16.2517291 C11.2712897,16.4291919 11.4584987,16.6135014 11.6382362,16.8041899 C11.6702739,16.838183 11.7017156,16.8719881 11.7329236,16.9059887 C11.7787871,16.9559522 11.824418,17.0066462 11.8695332,17.0577595 C11.90577,17.0988115 11.9418793,17.140374 11.9776493,17.1822057 C12.0304053,17.2438987 12.082595,17.3063876 12.1340328,17.369452 C12.1469538,17.3852944 12.1596303,17.4009288 12.1722607,17.4165981 C12.2298399,17.4880247 12.2867366,17.5605398 12.3426524,17.6337685 C12.3852385,17.6895352 12.4275293,17.7460895 12.469238,17.8030539 C12.4982518,17.8426815 12.5268881,17.8823727 12.5552427,17.9222581 C12.5886977,17.9693183 12.621737,18.0166146 12.6543816,18.0641757 C12.6983551,18.1282401 12.741701,18.1929205 12.7843198,18.2580709 C12.8082412,18.2946394 12.8318992,18.3313021 12.8553275,18.3681103 C12.8915037,18.4249444 12.927226,18.4822792 12.9623926,18.5399546 C12.992498,18.5893356 13.0218888,18.6384432 13.0508777,18.6877902 C13.0888869,18.7524784 13.1266858,18.8184376 13.1637684,18.8848076 C13.1837689,18.9206122 13.2030743,18.9556411 13.2221805,18.9907821 C13.2590385,19.0585577 13.2956059,19.1276241 13.3314052,19.1971053 C13.3555791,19.2440244 13.3793562,19.2910388 13.4027822,19.3382377 C13.4263778,19.3857848 13.4493809,19.4330248 13.4720326,19.4804445 C13.5012755,19.5416522 13.5302106,19.6037708 13.5585431,19.6661862 C13.5902942,19.7361334 13.6212681,19.8064052 13.651479,19.8770373 C13.6680945,19.9158819 13.6845531,19.9550142 13.7007776,19.9942544 C13.773863,20.1710334 13.8420847,20.3496851 13.9054583,20.5303386 C13.9644803,20.6985885 14.0192899,20.8685508 14.0698042,21.0401021 L14.0698042,21.0401021 L14.128,21.253 L14.2093819,21.2357878 C18.2819887,20.2642862 21.2429072,16.728439 21.4840965,12.5486798 L21.4840965,12.5486798 L21.4908817,12.3950523 L21.4908817,12.3950523 L21.2648449,12.4247541 C21.1410702,12.4396535 21.0170435,12.452347 20.8928246,12.4628288 C20.8581645,12.4657544 20.8238125,12.4684819 20.7894471,12.4710403 C20.6675562,12.4801167 20.5450657,12.4870847 20.4224625,12.4919043 L20.4224657,12.4919092 L19.9996735,12.4999999 C18.353704,12.4989251 16.7350104,12.1087428 15.2741734,11.3658525 L15.2741734,11.3658525 Z M4.00191756,14.4999963 C3.62060097,14.5014589 3.23986043,14.5254278 2.861677,14.5717229 L2.90809057,14.7388639 C3.38668474,16.3222445 4.27130599,17.7555512 5.486,18.903 L5.486,18.903 L5.74869374,18.7656955 C7.05911384,18.0499754 8.29653276,17.2080203 9.44332766,16.2518208 L9.44332766,16.2518208 L9.461,16.236 L9.36987532,16.1702759 C7.89252237,15.1550885 6.15543007,14.5770931 4.35941653,14.5071857 L4.35941653,14.5071857 L4.34499936,14.5063782 Z M4.37964327,13.507232 L4.5856249,13.5169083 C4.63593198,13.5197669 4.68619254,13.5229861 4.73640295,13.5265646 C4.78043815,13.5297026 4.82455267,13.5331269 4.86862593,13.5368282 C4.95173693,13.5438077 5.03472688,13.5517751 5.11755346,13.5607223 C5.14159494,13.5633202 5.1652788,13.565961 5.1889489,13.568682 C5.28424815,13.5796344 5.37958219,13.5919217 5.47466634,13.6055049 C5.52857481,13.6132049 5.58261333,13.6213549 5.63656618,13.629923 C5.69680969,13.6394912 5.75676209,13.6495483 5.81660183,13.6601212 C5.88154212,13.6715938 5.94658096,13.6837194 6.01147777,13.696454 C6.06636818,13.7072276 6.12068307,13.718336 6.17489315,13.7298708 C6.24060545,13.7438493 6.30672669,13.7585854 6.37268222,13.7739557 C6.42514599,13.7861821 6.47744386,13.7987947 6.52963258,13.8118059 C6.59043153,13.8269652 6.6508453,13.8426021 6.71110499,13.8587733 C6.77116522,13.8748902 6.83120776,13.8915768 6.89108948,13.9087942 C6.94791805,13.9251336 7.00461615,13.9419555 7.06116328,13.9592534 C7.12194769,13.9778475 7.18257623,13.9969977 7.24302271,14.0166958 C7.29296954,14.0329733 7.3426164,14.0495647 7.39213562,14.0665259 C7.46034701,14.0898867 7.52869542,14.114088 7.5967878,14.1389952 C7.64485972,14.1565809 7.6924969,14.174401 7.74000424,14.192567 C7.80286901,14.2166044 7.86562998,14.2412977 7.92815375,14.2665959 C7.98275752,14.2886901 8.0370804,14.3112034 8.09121707,14.3341743 C8.1429212,14.356112 8.19462667,14.378543 8.24615592,14.4013923 C8.30231405,14.4262968 8.35789773,14.4515285 8.41326819,14.4772483 C8.48385169,14.5100303 8.55456628,14.5438402 8.62491565,14.5784491 C8.66406826,14.5977131 8.70260899,14.6169715 8.74103714,14.6364703 C8.80404509,14.6684367 8.86726356,14.7013228 8.93016389,14.7348621 C8.97797685,14.7603555 9.02576581,14.7863148 9.07336503,14.8126523 C9.11287911,14.8345198 9.15162496,14.8562844 9.19024171,14.8783005 C9.25888925,14.9174347 9.32742557,14.9575415 9.39553591,14.9984445 C9.41914281,15.0126205 9.44297515,15.0270612 9.46675449,15.0415995 C9.64826066,15.1525755 9.82649181,15.2691136 10.0013648,15.3912345 L9.69681744,15.1863825 C9.69979581,15.1883111 9.70277329,15.1902413 9.70574989,15.192173 L10.0013648,15.3912345 L10.232,15.558 L10.3354803,15.464977 C10.4744112,15.3352819 10.6116394,15.2038819 10.7471359,15.0708123 C10.8272564,14.9921317 10.9072437,14.9123894 10.9866123,14.8320638 L10.7471359,15.0708123 C10.8874078,14.933053 11.0258239,14.7935043 11.1623523,14.6522054 L10.9866123,14.8320638 C11.1082039,14.709006 11.2283433,14.5845792 11.3470087,14.4588101 L11.1623523,14.6522054 C11.2955784,14.5143241 11.4270069,14.3747763 11.5566082,14.2335984 L11.3470087,14.4588101 C11.4996794,14.297 11.6499103,14.1329681 11.7976548,13.9667711 L11.5566082,14.2335984 C11.6777328,14.1016542 11.7972613,13.9682861 11.9151694,13.8335239 L11.7976548,13.9667711 C11.9079442,13.8427072 12.0168481,13.7174369 12.1243472,13.5909839 L11.9151694,13.8335239 C12.0565327,13.6719539 12.1955666,13.5083798 12.3322296,13.3428531 L12.1243472,13.5909839 C12.2524417,13.440304 12.3785415,13.2879448 12.5026138,13.1339463 L12.3322296,13.3428531 C12.4488346,13.2016205 12.5637135,13.0589662 12.6768403,12.9149222 L12.5026138,13.1339463 C12.62442,12.9827605 12.744272,12.8299949 12.8621391,12.6756871 L12.6768403,12.9149222 C12.8116801,12.7432309 12.9440306,12.5695652 13.0738478,12.3939788 L12.8621391,12.6756871 C12.9694453,12.5352052 13.0751063,12.3934452 13.1790987,12.2504356 L13.0738478,12.3939788 C13.18201,12.2476821 13.2884136,12.100052 13.3930331,11.9511198 L13.1790987,12.2504356 C13.299063,12.0854614 13.4168068,11.9188244 13.5322942,11.7505685 L13.3930331,11.9511198 C13.5361919,11.7473247 13.6760099,11.5410913 13.812422,11.3324995 L13.5322942,11.7505685 C13.6430329,11.5892311 13.7516969,11.4264051 13.8582546,11.2621293 L14.1548908,10.7922058 L14.1867377,10.7361938 C11.6217959,9.03230049 9.94133761,6.29187377 9.57382099,3.25281392 C9.55880412,3.1243193 9.5454719,2.99462026 9.53454404,2.86443667 L9.53454404,2.86443667 L9.531,2.824 L9.30192289,2.88882503 C5.29905146,4.07180061 2.49913462,7.76116083 2.49999554,11.997987 C2.50166469,12.4125337 2.52987792,12.826263 2.58435462,13.2366477 L2.58435462,13.2366477 L2.639,13.593 L2.88675513,13.5622308 C3.13290739,13.5355543 3.3801044,13.5174227 3.6280557,13.5078761 L3.6280557,13.5078761 L4.00051208,13.5000003 C4.12711123,13.50013 4.25350726,13.5025473 4.37964327,13.507232 Z M17.85,4.518 L17.7539777,4.91012293 C17.2147087,6.98360126 16.3895938,8.97402078 15.3008967,10.8236298 L15.5539994,10.3803782 L15.7274603,10.4744873 C15.8333428,10.5283324 15.9401426,10.5801283 16.0477988,10.629858 C16.0834382,10.6463215 16.119294,10.6626134 16.155242,10.6786766 L16.0477988,10.629858 C16.1573094,10.6804444 16.2677061,10.7288927 16.3789252,10.7751853 L16.155242,10.6786766 C16.2804059,10.7346056 16.4066886,10.7877631 16.533996,10.838123 L16.3789252,10.7751853 C16.4832278,10.818599 16.5882536,10.8601167 16.6939498,10.8997238 L16.533996,10.838123 C16.6446486,10.8818946 16.7560753,10.9235527 16.8682145,10.96308 L16.6939498,10.8997238 C16.8095467,10.9430408 16.9259456,10.9840724 17.0430774,11.0227994 L16.8682145,10.96308 C16.979477,11.0022982 17.0914409,11.0394189 17.2040458,11.0744252 L17.0430774,11.0227994 C17.1558607,11.0600886 17.2693236,11.095241 17.3834043,11.1282396 L17.2040458,11.0744252 C17.3130322,11.1083066 17.4226192,11.1402073 17.532752,11.170112 L17.3834043,11.1282396 C17.4976731,11.1612925 17.6125618,11.1921844 17.7280086,11.2208979 L17.532752,11.170112 C17.6560409,11.2035891 17.7800139,11.2345649 17.9045943,11.263018 L17.7280086,11.2208979 C17.839095,11.248527 17.9506981,11.2741392 18.0627627,11.2977192 L17.9045943,11.263018 C18.0148063,11.2881894 18.1254936,11.3113866 18.2366032,11.3325946 L18.0627627,11.2977192 C18.1938467,11.3253011 18.3255622,11.3501024 18.457821,11.3720985 L18.2366032,11.3325946 C18.3526221,11.3547396 18.4691015,11.3747159 18.5859808,11.3925064 L18.457821,11.3720985 C18.5669427,11.3902467 18.6764341,11.4064852 18.7862458,11.4208003 L18.5859808,11.3925064 C18.7047004,11.4105771 18.8238327,11.4263928 18.9433142,11.4399357 L18.7862458,11.4208003 C19.0747529,11.4584103 19.3654706,11.4827436 19.6574998,11.4935494 L19.6574998,11.4935494 L20.0004963,11.5000099 L20.0004963,11.5000099 L20.3831,11.4926757 C20.6379391,11.4826595 20.8922201,11.4623873 21.1453258,11.4319208 L21.48,11.384 L21.4672811,11.190471 C21.2471529,8.62346997 19.992839,6.25880199 18.0017216,4.63734306 L18.0017216,4.63734306 L17.85,4.518 Z M16.6849251,3.74279707 C14.8851231,2.71895558 12.7990538,2.3111734 10.7461911,2.58190094 L10.7461911,2.58190094 L10.519,2.615 L10.534293,2.81857606 C10.7851328,5.66982516 12.3108974,8.2605398 14.6877266,9.86223717 L14.9721367,9.33806236 C15.8350809,7.68638767 16.4864016,5.93167263 16.9100947,4.11543186 L16.9100947,4.11543186 L16.956,3.903 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >فعالیت ها</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>سالن بیلیارد</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="facilities-facilities"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M8.91126971,12.3000016 C9.97913136,12.3027134 11.0068387,12.7073226 11.7388814,13.3918977 C11.9927747,13.5716199 12.2891205,13.682076 12.550025,13.71 L12.550025,13.71 L15.4811934,13.7102797 C16.347187,13.7303258 17.16,14.1066282 17.1534915,15.1295876 L17.1534915,15.1295876 L17.2011134,15.0869976 C17.3044661,14.9831171 17.4020338,14.8687544 17.4932969,14.7439242 L17.4932969,14.7439242 L17.6253981,14.5488302 L18.9364266,13.0665844 C19.2303462,12.76243 19.624014,12.5708513 20.0483554,12.5291128 C20.5257394,12.482157 21.0019952,12.6287722 21.3774653,12.9421555 C22.1790405,13.636854 22.0556295,14.6350315 21.2897545,15.6331956 C21.0713754,15.9049562 20.9234868,16.0945268 20.7946445,16.2678126 L20.7946445,16.2678126 L19.935063,17.4695956 L19.1890591,18.4712505 C18.0486591,19.9819102 16.894031,20.577824 15.9458394,20.6101826 L15.9458394,20.6101826 L8.58923427,20.6101298 C8.68348201,21.2221625 8.38826753,21.8531641 7.80460448,22.1667134 L7.80460448,22.1667134 L5.56595082,23.2922934 L1.33061406,14.7769198 L3.56559561,13.6531861 C4.22603692,13.3214911 5.01533828,13.5233612 5.44190754,14.0973779 L5.72502105,13.8635357 C5.92540649,13.7026206 6.13417451,13.5439854 6.34825062,13.3921584 C6.74698014,13.1093715 7.13673049,12.8698784 7.51048794,12.6870941 C8.01920873,12.4383065 8.48524634,12.3000016 8.91126971,12.3000016 Z M4.68440439,14.7668139 C4.55961657,14.5216574 4.26023116,14.4233518 4.01460448,14.5467134 L4.01460448,14.5467134 L2.669,15.222 L6.013,21.948 L7.34327829,21.2795879 C7.55531523,21.1656179 7.65243741,20.9200066 7.58444568,20.693833 L7.58444568,20.693833 L7.55111102,20.6102242 Z M8.91,13.3 C8.66279728,13.3 8.33379095,13.3976396 7.94981154,13.5854229 C7.62986294,13.7418923 7.28457911,13.9540617 6.92674938,14.2078416 C6.63098855,14.4176011 6.34390951,14.6432922 6.07763585,14.8689478 L6.07763585,14.8689478 L6.01,14.925 L8.198,19.61 L15.9286411,19.6104789 C16.5242243,19.5899671 17.3365525,19.1866548 18.2320717,18.0727619 L18.2320717,18.0727619 L18.3909409,17.8687495 C18.6273307,17.5556098 18.8275799,17.2874211 19.0014105,17.0515576 L19.0014105,17.0515576 L19.3520494,16.5700875 L19.9905019,15.6733581 C20.0452098,15.5997417 20.1027647,15.5238583 20.1663084,15.441672 L20.1663084,15.441672 L20.5032843,15.0156702 C20.9803327,14.3938035 21.0331009,13.9670019 20.7296804,13.703921 C20.5671238,13.568294 20.3569327,13.5035867 20.1462436,13.5243102 C19.9355546,13.5450337 19.741999,13.6494538 19.5946019,13.8311698 L19.5946019,13.8311698 L18.4264008,15.1411175 C17.9686094,15.8886838 17.254463,16.4395772 16.4027936,16.7000251 L16.4027936,16.7000251 L16.2686002,16.7354441 C15.6780164,16.8913227 15.376795,16.0543184 15.9312727,15.7981118 L15.9312727,15.7981118 L15.9723403,15.771345 L16.0189038,15.731882 C16.1377823,15.6179984 16.1929844,15.4528951 16.16,15.21 L16.16,15.21 L16.1506458,15.112984 C16.0953376,14.839076 15.8021678,14.7179642 15.4695974,14.7101458 L15.4695974,14.7101458 L12.5012933,14.707622 C12.0187538,14.6603915 11.5568517,14.488228 11.1100636,14.1666651 C10.5112243,13.6114791 9.72533038,13.3020721 8.91,13.3 Z M16.0937474,3.38131343 C16.642775,2.73434482 17.4959368,2.39961602 18.3583007,2.52496877 L18.3583007,2.52496877 L18.5308088,2.55621755 C19.6805155,2.80602293 20.5004611,3.82366388 20.4999997,5 C20.4999997,5.98921566 19.7764733,7.29449672 18.5473757,8.86408751 C18.1194709,9.41053355 17.6538187,9.95610174 17.1766728,10.481607 C16.9671009,10.7124193 16.776238,10.9165527 16.6116994,11.0883965 L16.6116994,11.0883965 L16.3551073,11.3519925 C16.1601014,11.5487241 15.8423171,11.5494241 15.6464465,11.3535534 C15.5539726,11.2610795 15.4136186,11.1166565 15.2367099,10.9287347 L15.2367099,10.9287347 L14.650902,10.2903478 C14.2951579,9.89254735 13.9437137,9.48003284 13.6095654,9.06234752 C13.239959,8.60033945 12.9074526,8.15145579 12.6210117,7.72179454 C11.9032315,6.64512419 11.4999997,5.73785296 11.4999997,5.00019588 C11.499539,3.82366374 12.3194846,2.80602291 13.4691912,2.55621755 C14.3889566,2.35637325 15.3206231,2.69121358 15.9036926,3.37586528 L15.9036926,3.37586528 L15.9999997,3.498 Z M18.3184853,3.53341699 C17.6286613,3.38353377 16.9276799,3.73491738 16.635,4.37730404 L16.635,4.37730404 L16.5803548,4.47424731 C16.4514921,4.66538757 16.234785,4.78282202 15.9999996,4.78282202 C15.7316741,4.78282202 15.4869605,4.62943811 15.365,4.37730404 C15.0723201,3.73491738 14.3713387,3.38353377 13.6815147,3.53341699 C12.9916907,3.68330021 12.4997233,4.29388476 12.4999996,5 C12.4999996,5.48436926 12.8375089,6.2437647 13.453062,7.16709435 C13.7221768,7.57076643 14.0378185,7.99688277 14.3904342,8.43765248 C14.8199032,8.97448872 15.2811239,9.50489252 15.7424016,10.0046099 L15.7424016,10.0046099 L15.9999996,10.28 L16.4363219,9.80938644 C16.8981869,9.30071074 17.348467,8.77315286 17.7600466,8.24755463 C18.8503492,6.85520869 19.4999996,5.6832038 19.4999996,4.99980396 C19.5002767,4.29388474 19.0083093,3.68330022 18.3184853,3.53341699 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >خدمات دهی هتل</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>خدمات اینترنت</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>وای-فای</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>وای-فای رایگان</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Food-Drink"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M22.0321219,3.50094585 L22.1212678,3.51492875 C22.3593989,3.57446152 22.5145535,3.79556891 22.4990541,4.03212186 L22.4850713,4.12126781 L20.4850713,12.1212678 C20.4363811,12.3160284 20.2771763,12.4599248 20.0844332,12.4928558 L20,12.5 L19.5868817,12.4998817 L20.493197,17.9378005 C20.5385945,18.2101857 20.3545847,18.4677994 20.0821995,18.513197 C19.8400794,18.5535503 19.6096304,18.4126435 19.5295246,18.1895279 L19.506803,18.1021995 L18.5718817,12.4998817 L17.3018817,12.4998817 L18.4916084,18.9087793 C18.52413,19.0840458 18.4607502,19.2608813 18.3299673,19.3756927 L18.2590909,19.4276352 C17.0487694,20.1609314 15.5312306,20.1609314 14.28,19.4 L14.4608817,19.5018817 L13.5112195,19.9177234 C12.6803232,20.2829932 11.7507561,20.3351747 10.8824458,20.0700348 L10.666737,19.9971365 L10.4541359,19.9110019 L9.519,19.463 L9.36559116,19.5417787 C8.27480179,20.0544249 6.99817097,20.0202485 5.93216046,19.4392495 L5.93216046,19.4392495 L5.73484848,19.3239041 C5.56042448,19.2148021 5.47063433,19.0099953 5.50857641,18.8077891 L5.50857641,18.8077891 L6.69088172,12.4998817 L5.42388172,12.4998817 L4.49324118,18.1019338 C4.44799042,18.3743433 4.19047583,18.5584919 3.91806625,18.5132412 C3.6759244,18.4730183 3.50351961,18.2650808 3.4999779,18.028047 L3.50675882,17.9380662 L4.40888172,12.4998817 L4,12.5 C3.79924541,12.5 3.62103255,12.3804487 3.54233774,12.2014473 L3.51492875,12.1212678 L1.51492875,4.12126781 C1.44795439,3.85337036 1.61083473,3.58190311 1.87873219,3.51492875 C2.11686326,3.45539598 2.3578149,3.57747681 2.45545806,3.7934938 L2.48507125,3.87873219 L4.39,11.5 L6.87888172,11.4998817 L7.17857641,9.90778906 C7.21739892,9.70089066 7.38033265,9.54385096 7.58163061,9.50782382 L7.67,9.5 L16.33,9.5 C16.5709616,9.5 16.777647,9.67186189 16.8216084,9.90877934 L16.8216084,9.90877934 L17.1158817,11.4998817 L19.609,11.5 L21.5149287,3.87873219 C21.5670199,3.6703675 21.7428167,3.52553168 21.9444239,3.50296176 L22.0321219,3.50094585 Z M15.914,10.5 L8.084,10.5 L6.558,18.634 L6.61629925,18.6625309 C7.39782069,19.0087673 8.30044504,18.9799143 9.06178267,18.5759718 L8.99988172,18.6048817 L9,15.87 C9,15.5938576 9.22385763,15.37 9.5,15.37 C9.74545989,15.37 9.94960837,15.5468752 9.99194433,15.7801244 L10,15.87 L9.99988172,18.5848817 L10.8712195,19.0022766 C11.5193373,19.2871953 12.2490851,19.313097 12.9128051,19.0796484 L13.1097926,19.001833 L13.9998817,18.6118817 L14,14.06 C14,13.7838576 14.2238576,13.56 14.5,13.56 C14.7454599,13.56 14.9496084,13.7368752 14.9919443,13.9701244 L15,14.06 L15.0000391,18.6627884 C15.7404519,19.0472894 16.6109218,19.0795856 17.3731828,18.7596769 L17.3731828,18.7596769 L17.441,18.728 L16.2102367,12.1011503 C16.2088668,12.0944823 16.2076296,12.0877658 16.206528,12.0810037 L15.914,10.5 Z M12,4.96 C12.2400453,4.96 12.4405817,5.12915791 12.4889078,5.35477235 C14.1461995,5.59198354 15.42,7.01723575 15.42,8.74 C15.42,9.01614237 15.1961424,9.24 14.92,9.24 L14.92,9.24 L9.08,9.24 C8.80385763,9.24 8.58,9.01614237 8.58,8.74 C8.58,7.01688982 9.85431207,5.59141116 11.5119388,5.35456139 C11.5594183,5.12915791 11.7599547,4.96 12,4.96 Z M12,6.32000006 C10.8773156,6.32000006 9.93318898,7.08449712 9.6598092,8.12130229 L9.6598092,8.12130229 L9.632,8.24 L14.367,8.24 L14.3401908,8.12130229 C14.0798291,7.13386879 13.2110803,6.39342678 12.1591157,6.32514758 L12.1591157,6.32514758 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >خوردنی و اشامیدنی</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>رستوران</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >درخواست امکانات در داخل اتاق</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>سرو صبحانه در اتاق</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>پکیج ناهار برای پیک نیک</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>غرفه اسنک</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >منوهای رژیمی (در صورت درخواست)</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>غذای کودک</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>بوفه ویژه کودکان</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Pool-and-Wellness"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M22.4469258,19.7758186 C22.5569809,19.9952233 22.4904134,20.257006 22.3009051,20.3994283 L22.2241814,20.4469258 L19.1125,22.0077653 C18.4701085,22.3269774 17.7246756,22.3535784 17.064258,22.0871434 L16.8863932,22.0072136 L15.56625,21.347142 C14.6460824,20.8866898 13.5736285,20.8559929 12.6330397,21.2551098 L12.4336068,21.3472136 L11.1125,22.0077653 C10.4701085,22.3269774 9.7246756,22.3535784 9.06425799,22.0871434 L8.8863932,22.0072136 L7.56625,21.347142 C6.64608237,20.8866898 5.57362854,20.8559929 4.63238067,21.2554385 L4.43279626,21.3476179 L2.22279626,22.4476179 C1.9755837,22.5706649 1.67542903,22.4700088 1.55238205,22.2227963 C1.44300696,22.0030518 1.51038492,21.7414765 1.70033339,21.5996417 L1.77720374,21.5523821 L3.98625,20.452858 C5.17926445,19.8558732 6.57137997,19.8207564 7.78769869,20.347448 L8.0136068,20.4527864 L9.3325,21.1122347 C9.70625508,21.2979581 10.1381448,21.3185941 10.5240413,21.17453 L10.6663932,21.1127864 L11.98625,20.452858 C13.1792644,19.8558732 14.57138,19.8207564 15.7876987,20.347448 L16.0136068,20.4527864 L17.3325,21.1122347 C17.7062551,21.2979581 18.1381448,21.3185941 18.5236377,21.1747321 L18.6658186,21.1130742 L21.7758186,19.5530742 C22.0226489,19.4292622 22.3231138,19.5289883 22.4469258,19.7758186 Z M22.4469258,15.7758186 C22.5569809,15.9952233 22.4904134,16.257006 22.3009051,16.3994283 L22.2241814,16.4469258 L19.1125,18.0077653 C18.4701085,18.3269774 17.7246756,18.3535784 17.064258,18.0871434 L16.8863932,18.0072136 L15.56625,17.347142 C14.6460824,16.8866898 13.5736285,16.8559929 12.6330397,17.2551098 L12.4336068,17.3472136 L11.1125,18.0077653 C10.4701085,18.3269774 9.7246756,18.3535784 9.06425799,18.0871434 L8.8863932,18.0072136 L7.56625,17.347142 C6.64608237,16.8866898 5.57362854,16.8559929 4.63238067,17.2554385 L4.43279626,17.3476179 L2.22279626,18.4476179 C1.9755837,18.5706649 1.67542903,18.4700088 1.55238205,18.2227963 C1.44300696,18.0030518 1.51038492,17.7414765 1.70033339,17.5996417 L1.77720374,17.5523821 L3.98625,16.452858 C5.17926445,15.8558732 6.57137997,15.8207564 7.78769869,16.347448 L8.0136068,16.4527864 L9.3325,17.1122347 C9.70625508,17.2979581 10.1381448,17.3185941 10.5240413,17.17453 L10.6663932,17.1127864 L11.98625,16.452858 C13.1792644,15.8558732 14.57138,15.8207564 15.7876987,16.347448 L16.0136068,16.4527864 L17.3325,17.1122347 C17.7062551,17.2979581 18.1381448,17.3185941 18.5236377,17.1747321 L18.6658186,17.1130742 L21.7758186,15.5530742 C22.0226489,15.4292622 22.3231138,15.5289883 22.4469258,15.7758186 Z M12.775,3.10377155 C13.2209923,3.10377155 13.6486816,3.28111075 13.963293,3.59618644 C14.2788893,3.91131836 14.4562284,4.33900773 14.4562284,4.785 C14.4562284,5.17524323 14.3204531,5.55147331 14.0748981,5.85073299 L13.9630148,5.97409111 L11.029,8.9 L17.3530229,15.2059169 L16.6469771,15.9140831 L9.6118226,8.89999192 L13.256707,5.26618644 C13.3844483,5.13863304 13.4562284,4.96552068 13.4562284,4.785 C13.4562284,4.60447932 13.3844483,4.43136696 13.2561864,4.30329303 C13.128633,4.1755517 12.9555207,4.10377155 12.775,4.10377155 C12.6305835,4.10377155 12.4909082,4.14971085 12.3751609,4.23383652 L12.2931367,4.30396958 L8.04460365,8.5425 C7.87228205,8.71584998 7.85313521,8.98397038 7.98642549,9.17764063 L8.04355339,9.24644661 L10.3997591,11.6026523 L6.67090119,15.2761858 L5.96909881,14.5638142 L8.98,11.597 L7.33539635,9.9525 C6.79016004,9.40400983 6.75608277,8.53926154 7.23437326,7.95002821 L7.33686329,7.83603042 L11.5861864,3.59670697 C11.9013184,3.28111075 12.3290077,3.10377155 12.775,3.10377155 Z M16.0608132,6.71382006 L16.2468072,6.71616796 L16.4318626,6.73540175 C16.8597989,6.79981542 17.2586236,7.00042811 17.5843359,7.32579983 L17.5843359,7.32579983 L17.7193223,7.47284981 L17.8218141,7.61989276 C18.400279,8.53205875 18.2147968,9.73783494 17.3846312,10.4302823 L17.3846312,10.4302823 L16.8518347,10.8851934 C16.4629972,11.189982 15.9750738,11.3454357 15.4775652,11.3187834 C14.9178679,11.2887997 14.394856,11.0309532 13.9990211,10.5647741 L13.9990211,10.5647741 L13.8983177,10.4185157 C13.3302151,9.51243051 13.5080557,8.32134398 14.3194847,7.6248205 L14.3194847,7.6248205 L14.7286988,7.26460506 C15.1384419,6.8818799 15.6870638,6.68368285 16.2468072,6.71616796 Z M16.065,7.714 L15.9457977,7.72883896 C15.7465252,7.76437251 15.5581256,7.85816913 15.4005153,8.0051795 L15.4005153,8.0051795 L14.9756832,8.37938171 C14.5356746,8.75711044 14.4397503,9.39956327 14.7329173,9.86813747 L14.7329173,9.86813747 L14.7897514,9.95474799 C14.9765015,10.1727901 15.2443857,10.3048578 15.5310599,10.3202153 C15.8177341,10.3355728 16.0981947,10.2328808 16.3253688,10.0197177 L16.3253688,10.0197177 L16.7397209,9.66604519 C17.1877848,9.29228897 17.2874371,8.64447298 16.9902413,8.17481997 L16.9902413,8.17481997 L16.9287206,8.08345945 C16.7429383,7.86446762 16.4755668,7.73112684 16.2143504,7.71531588 L16.2143504,7.71531588 L16.065,7.714 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >استخر و سالن های ورزشی و بدنسازی</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>سونا</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>سالن بدنسازی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>مرکز اسپا و سلامتی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>ماساژ</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>حمام ترکی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>استخر روباز</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>استخر روباز فصلی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>حمام عمومی</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Transport"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M20.58,11.46 L20.44,11 L21.5,11 C21.7761424,11 22,10.7761424 22,10.5 C22,10.2238576 21.7761424,10 21.5,10 L20.12,10 L18.91,6.11 C18.5153532,4.83908977 17.3306244,3.98005963 16,4 L15,4 L15,3 C15,2.44771525 14.5522847,2 14,2 L10,2 C9.44771525,2 9,2.44771525 9,3 L9,4 L8,4 C6.6693756,3.98005963 5.48464683,4.83908977 5.09,6.11 L3.88,10 L2.5,10 C2.22385763,10 2,10.2238576 2,10.5 C2,10.7761424 2.22385763,11 2.5,11 L3.56,11 L3.42,11.46 C2.5402332,12.005056 2.00352789,12.9650782 2,14 L2,17.19 C2.00428692,17.9002221 2.38491093,18.5548954 3,18.91 L3,21 C3,21.5522847 3.44771525,22 4,22 L6,22 C6.55228475,22 7,21.5522847 7,21 L7,19.5 L11.2,19.92 C11.7321609,19.9700122 12.2678391,19.9700122 12.8,19.92 L17,19.5 L17,21 C17,21.5522847 17.4477153,22 18,22 L20,22 C20.5522847,22 21,21.5522847 21,21 L21,18.91 C21.6150891,18.5548954 21.9957131,17.9002221 22,17.19 L22,14 C21.9964721,12.9650782 21.4597668,12.005056 20.58,11.46 Z M10,3 L14,3 L14,4 L10,4 L10,3 Z M6.05,6.4 C6.31654309,5.55176244 7.11106591,4.9813358 8,5 L16,5 C16.9072002,4.95846811 17.7285051,5.53338152 18,6.4 L19.39,11 L4.61,11 L6.05,6.4 Z M6,21 L4,21 L4,19.2 L6,19.4 L6,21 Z M20,21 L18,21 L18,19.4 L20,19.2 L20,21 Z M21,17.19 C20.9990165,17.5585937 20.7953472,17.8967616 20.47,18.07 L17.2,18.48 L12.7,18.93 C12.2341908,18.9700082 11.7658092,18.9700082 11.3,18.93 L6.8,18.48 L3.53,18.07 C3.20465283,17.8967616 3.00098353,17.5585937 3,17.19 L3,14 C3,12.8954305 3.8954305,12 5,12 L19,12 C20.1045695,12 21,12.8954305 21,14 L21,17.19 Z M14,17.5 C14,17.7761424 13.7761424,18 13.5,18 L10.5,18 C10.2238576,18 10,17.7761424 10,17.5 C10,17.2238576 10.2238576,17 10.5,17 L13.5,17 C13.7761424,17 14,17.2238576 14,17.5 Z M15,15.5 C15,15.7761424 14.7761424,16 14.5,16 L9.5,16 C9.22385763,16 9,15.7761424 9,15.5 C9,15.2238576 9.22385763,15 9.5,15 L14.5,15 C14.7761424,15 15,15.2238576 15,15.5 Z M6,13 C4.8954305,13 4,13.8954305 4,15 C4,16.1045695 4.8954305,17 6,17 C7.1045695,17 8,16.1045695 8,15 C8,13.8954305 7.1045695,13 6,13 Z M6,16 C5.44771525,16 5,15.5522847 5,15 C5,14.4477153 5.44771525,14 6,14 C6.55228475,14 7,14.4477153 7,15 C7,15.5522847 6.55228475,16 6,16 Z M18,13 C16.8954305,13 16,13.8954305 16,15 C16,16.1045695 16.8954305,17 18,17 C19.1045695,17 20,16.1045695 20,15 C20,13.8954305 19.1045695,13 18,13 Z M18,16 C17.4477153,16 17,15.5522847 17,15 C17,14.4477153 17.4477153,14 18,14 C18.5522847,14 19,14.4477153 19,15 C19,15.5522847 18.5522847,16 18,16 Z"
-                              id="Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >سرویس حمل و نقل</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>ستقبال و بدرقه فرودگاهی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>اجاره خودرو</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >خدمات ترانسفر (با هزینه اضافه)</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >خدمات ترانسفر (با هزینه اضافه)</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>پارکینگ امنیتی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>پارکینگ</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >پارکینگ قابل دستری برای معلولان</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Reception-service"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M8.91126971,11.3000016 C9.97913136,11.3027134 11.0068387,11.7073226 11.7388814,12.3918977 C11.9927747,12.5716199 12.2891205,12.682076 12.550025,12.71 L12.550025,12.71 L15.4811934,12.7102797 C16.347187,12.7303258 17.16,13.1066282 17.1534915,14.1295876 L17.1534915,14.1295876 L17.2011134,14.0869976 C17.3044661,13.9831171 17.4020338,13.8687544 17.4932969,13.7439242 L17.4932969,13.7439242 L17.6253981,13.5488302 L18.9364266,12.0665844 C19.2303462,11.76243 19.624014,11.5708513 20.0483554,11.5291128 C20.5257394,11.482157 21.0019952,11.6287722 21.3774653,11.9421555 C22.1790405,12.636854 22.0556295,13.6350315 21.2897545,14.6331956 C21.0713754,14.9049562 20.9234868,15.0945268 20.7946445,15.2678126 L20.7946445,15.2678126 L19.935063,16.4695956 L19.1890591,17.4712505 C18.0486591,18.9819102 16.894031,19.577824 15.9458394,19.6101826 L15.9458394,19.6101826 L8.58917806,19.609765 C8.6835993,20.2219118 8.38838349,20.8531018 7.80460448,21.1667134 L7.80460448,21.1667134 L5.56595082,22.2922934 L1.33061406,13.7769198 L3.56559561,12.6531861 C4.22603692,12.3214911 5.01533828,12.5233612 5.44190754,13.0973779 L5.72502105,12.8635357 C5.92540649,12.7026206 6.13417451,12.5439854 6.34825062,12.3921584 C6.74698014,12.1093715 7.13673049,11.8698784 7.51048794,11.6870941 C8.01920873,11.4383065 8.48524634,11.3000016 8.91126971,11.3000016 Z M4.68440439,13.7668139 C4.55961657,13.5216574 4.26023116,13.4233518 4.01460448,13.5467134 L4.01460448,13.5467134 L2.669,14.222 L6.013,20.948 L7.34327829,20.2795879 C7.55531523,20.1656179 7.65243741,19.9200066 7.58444568,19.693833 L7.58444568,19.693833 L7.55111102,19.6102242 Z M8.91,12.3 C8.66279728,12.3 8.33379095,12.3976396 7.94981154,12.5854229 C7.62986294,12.7418923 7.28457911,12.9540617 6.92674938,13.2078416 C6.63098855,13.4176011 6.34390951,13.6432922 6.07763585,13.8689478 L6.07763585,13.8689478 L6.01,13.925 L8.198,18.61 L15.9286411,18.6104789 C16.5242243,18.5899671 17.3365525,18.1866548 18.2320717,17.0727619 L18.2320717,17.0727619 L18.3909409,16.8687495 C18.6273307,16.5556098 18.8275799,16.2874211 19.0014105,16.0515576 L19.0014105,16.0515576 L19.3520494,15.5700875 L19.9905019,14.6733581 C20.0452098,14.5997417 20.1027647,14.5238583 20.1663084,14.441672 L20.1663084,14.441672 L20.5032843,14.0156702 C20.9803327,13.3938035 21.0331009,12.9670019 20.7296804,12.703921 C20.5671238,12.568294 20.3569327,12.5035867 20.1462436,12.5243102 C19.9355546,12.5450337 19.741999,12.6494538 19.5946019,12.8311698 L19.5946019,12.8311698 L18.4264008,14.1411175 C17.9686094,14.8886838 17.254463,15.4395772 16.4027936,15.7000251 L16.4027936,15.7000251 L16.2686002,15.7354441 C15.6780164,15.8913227 15.376795,15.0543184 15.9312727,14.7981118 L15.9312727,14.7981118 L15.9723403,14.771345 L16.0189038,14.731882 C16.1377823,14.6179984 16.1929844,14.4528951 16.16,14.21 L16.16,14.21 L16.1506458,14.112984 C16.0953376,13.839076 15.8021678,13.7179642 15.4695974,13.7101458 L15.4695974,13.7101458 L12.5012933,13.707622 C12.0187538,13.6603915 11.5568517,13.488228 11.1100636,13.1666651 C10.5112243,12.6114791 9.72533038,12.3020721 8.91,12.3 Z M17.6020704,5.5 C19.1427401,5.50638395 20.4005934,6.7094412 20.4944109,8.2298091 L20.5,8.4 L20.5,10 C20.5,10.2761424 20.2761424,10.5 20,10.5 C19.7545401,10.5 19.5503916,10.3231248 19.5080557,10.0898756 L19.5,10 L19.5,8.4020704 C19.4958686,7.4033248 18.7255589,6.58565267 17.7481022,6.50629641 L17.6,6.5 L14.4020704,6.5 C13.4033248,6.50413136 12.5856527,7.27444111 12.5062964,8.25189778 L12.5,8.4 L12.5,10 C12.5,10.2761424 12.2761424,10.5 12,10.5 C11.7545401,10.5 11.5503916,10.3231248 11.5080557,10.0898756 L11.5,10 L11.5,8.3979296 C11.506384,6.85725992 12.7094412,5.59940661 14.2298091,5.50558912 L14.4,5.5 L17.6020704,5.5 Z M16,1.5 C17.1045695,1.5 18,2.3954305 18,3.5 C18,4.6045695 17.1045695,5.5 16,5.5 C14.8954305,5.5 14,4.6045695 14,3.5 C14,2.3954305 14.8954305,1.5 16,1.5 Z M16,2.5 C15.4477153,2.5 15,2.94771525 15,3.5 C15,4.05228475 15.4477153,4.5 16,4.5 C16.5522847,4.5 17,4.05228475 17,3.5 C17,2.94771525 16.5522847,2.5 16,2.5 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >خدمات دهی به مشتری</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>خدماتدهی 24 ساعته</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>روزنامه</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >چک&zwnj;این (ورود) و چک&zwnj;اوت (خروج) سریع</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>جعبه امانات</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>پارکینگ (غیر رایگان)</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>صرافی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>میز تور</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>خدمات بلیط</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>انبارنگهداری چمدان</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >امکانات وخدمت رسانی, دربان هتل</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>چک-این/ چک-اوت اختصاصی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>کمد قفلدار</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Common-area"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M8,1.5 C11.5898509,1.5 14.5,4.41014913 14.5,8 C14.5,11.4215021 11.8563982,14.2255578 8.50033196,14.4810299 L8.5,22 C8.5,22.2761424 8.27614237,22.5 8,22.5 C7.75454011,22.5 7.55039163,22.3231248 7.50805567,22.0898756 L7.5,22 L7.50067087,14.4811062 C4.14412846,14.2261164 1.5,11.4218429 1.5,8 C1.5,4.41014913 4.41014913,1.5 8,1.5 Z M22,17.5 C22.2761424,17.5 22.5,17.7238576 22.5,18 C22.5,18.2454599 22.3231248,18.4496084 22.0898756,18.4919443 L22,18.5 L20.5,18.5 L20.5,19.5 L22,19.5 C22.2761424,19.5 22.5,19.7238576 22.5,20 C22.5,20.2454599 22.3231248,20.4496084 22.0898756,20.4919443 L22,20.5 L20.5,20.5 L20.5,22 C20.5,22.2761424 20.2761424,22.5 20,22.5 C19.7545401,22.5 19.5503916,22.3231248 19.5080557,22.0898756 L19.5,22 L19.5,20.5 L14.5,20.5 L14.5,22 C14.5,22.2761424 14.2761424,22.5 14,22.5 C13.7545401,22.5 13.5503916,22.3231248 13.5080557,22.0898756 L13.5,22 L13.5,20.5 L12,20.5 C11.7238576,20.5 11.5,20.2761424 11.5,20 C11.5,19.7545401 11.6768752,19.5503916 11.9101244,19.5080557 L12,19.5 L13.5,19.5 L13.5,18.5 L12,18.5 C11.7238576,18.5 11.5,18.2761424 11.5,18 C11.5,17.7545401 11.6768752,17.5503916 11.9101244,17.5080557 L12,17.5 L22,17.5 Z M19.5,19.5 L19.5,18.5 L14.5,18.5 L14.5,19.5 L19.5,19.5 Z M8,2.5 C4.96243388,2.5 2.5,4.96243388 2.5,8 C2.5,10.8691554 4.69695546,13.2251845 7.50039328,13.4776139 L7.5,10.207 L5.64644661,8.35355339 C5.45118446,8.15829124 5.45118446,7.84170876 5.64644661,7.64644661 C5.82001296,7.47288026 6.08943736,7.45359511 6.2843055,7.58859116 L6.35355339,7.64644661 L7.5,8.793 L7.5,6 C7.5,5.72385763 7.72385763,5.5 8,5.5 C8.24545989,5.5 8.44960837,5.67687516 8.49194433,5.91012437 L8.5,6 L8.5,10.792 L9.64644661,9.64644661 C9.84170876,9.45118446 10.1582912,9.45118446 10.3535534,9.64644661 C10.5271197,9.82001296 10.5464049,10.0894374 10.4114088,10.2843055 L10.3535534,10.3535534 L8.5,12.206 L8.50061211,13.4775233 C11.2311835,13.2311523 13.38615,10.9890873 13.4956328,8.22120714 L13.5,8 C13.5,4.96243388 11.0375661,2.5 8,2.5 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >فضای عمومی</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>باغ</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>تراس</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>اتاق بازی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>کتابخانه</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>اتاق عبادت (نمازخانه)</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>تراس آفتاب&zwnj;گیر</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >اتاق تلویزیون و سالن مشترک</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Entertainment"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M8,13.5 C8.27614237,13.5 8.5,13.7238576 8.5,14 C8.5,14.2454599 8.32312484,14.4496084 8.08987563,14.4919443 L8,14.5 L5,14.5 C3.6745166,14.5 2.58996133,15.5315359 2.50531768,16.8356243 L2.5,17 L2.5,19 C2.5,19.2761424 2.27614237,19.5 2,19.5 C1.75454011,19.5 1.55039163,19.3231248 1.50805567,19.0898756 L1.5,19 L1.5,17 C1.5,15.1314366 2.9642776,13.6048736 4.8079648,13.5051789 L5,13.5 L8,13.5 Z M19,13.5 C20.8685634,13.5 22.3951264,14.9642776 22.4948211,16.8079648 L22.5,17 L22.5,19 C22.5,19.2761424 22.2761424,19.5 22,19.5 C21.7545401,19.5 21.5503916,19.3231248 21.5080557,19.0898756 L21.5,19 L21.5,17 C21.5,15.6745166 20.4684641,14.5899613 19.1643757,14.5053177 L19,14.5 L16,14.5 C15.7238576,14.5 15.5,14.2761424 15.5,14 C15.5,13.7545401 15.6768752,13.5503916 15.9101244,13.5080557 L16,13.5 L19,13.5 Z M10.6,14.88 L13.4069532,14.8800483 C14.10667,14.8897798 14.773658,15.177969 15.2603031,15.6808357 C15.6982838,16.1334157 15.957681,16.7262951 15.9956161,17.3435169 L16,17.55 L16,19 C16,19.2761424 15.7761424,19.5 15.5,19.5 C15.2545401,19.5 15.0503916,19.3231248 15.0080557,19.0898756 L15,19 L15.0000891,17.540562 C15.0082758,17.1069325 14.84331,16.6879197 14.541701,16.3762571 C14.2777931,16.1035523 13.9283103,15.9327147 13.5591997,15.8902583 L13.4,15.88 L10.6069532,15.8799517 C10.1732883,15.8859829 9.75990799,16.0645945 9.45829901,16.3762571 C9.19439116,16.6489619 9.03510075,17.0038566 9.00494581,17.3851399 L9,17.55 L9,19 C9,19.2761424 8.77614237,19.5 8.5,19.5 C8.25454011,19.5 8.05039163,19.3231248 8.00805567,19.0898756 L8,19 L8.00008908,17.559438 C7.98687992,16.8597782 8.25305171,16.1837023 8.73969687,15.6808357 C9.17767751,15.2282557 9.76173581,14.9495644 10.3893301,14.8912225 L10.6,14.88 Z M12,10.5 C13.0533432,10.5 13.9,11.3768945 13.9,12.45 C13.9,13.5231055 13.0533432,14.4 12,14.4 C10.9466568,14.4 10.1,13.5231055 10.1,12.45 C10.1,11.3768945 10.9466568,10.5 12,10.5 Z M12,11.5 C11.5069459,11.5 11.1,11.9214797 11.1,12.45 C11.1,12.9785203 11.5069459,13.4 12,13.4 C12.4930541,13.4 12.9,12.9785203 12.9,12.45 C12.9,11.9214797 12.4930541,11.5 12,11.5 Z M6,6.50000003 C6.56619075,6.50000003 7.03681481,6.90916975 7.13230758,7.44794464 C7.9462691,7.88968556 8.5,8.79452736 8.5,9.83 C8.5,11.2959028 7.39023295,12.5 6,12.5 C4.60976705,12.5 3.5,11.2959028 3.5,9.83 C3.5,8.79452736 4.0537309,7.88968556 4.86890357,7.44758753 C4.96318519,6.90916975 5.43380925,6.50000003 6,6.50000003 Z M17,7 L19,7.03 C19.8284271,7.03 20.5,7.70157288 20.5,8.53 L20.5,8.53 L20.5,9.91 C20.5,11.2907119 19.3807119,12.41 18,12.41 C16.6192881,12.41 15.5,11.2907119 15.5,9.91 L15.5,9.91 L15.500102,9.39020327 C15.5000341,9.38681036 15.5,9.38340917 15.5,9.38 L15.5,9.36900003 L15.5,8.5 C15.5,7.72030388 16.0948881,7.07955132 16.85554,7.00686658 L17,7 Z M5.752,9.615 L5.73591957,9.63496189 C5.41447787,9.95942434 5.00399272,10.1843092 4.55548455,10.2797798 L4.59494087,10.4162247 C4.80951396,11.0529585 5.36307308,11.5 6,11.5 C6.68494919,11.5 7.27348532,10.9830062 7.44770288,10.2690769 C6.84196342,10.1741288 6.3540228,10.0015924 5.97260178,9.76726173 L5.82939075,9.6731623 L5.752,9.615 Z M17.8708729,9.12883255 C17.5076387,9.61609794 17.2644535,9.8382258 17.015113,9.8745857 L16.94,9.88 L16.5,9.87900003 L16.5,9.91 C16.5,10.6896961 17.0948881,11.3304487 17.85554,11.4031334 L18,11.41 C18.8284271,11.41 19.5,10.7384271 19.5,9.91 L19.5,9.91 L19.5014629,9.45345138 C19.4481013,9.43579056 19.3911028,9.41746238 19.3311142,9.3988259 L19.1691448,9.3500028 C18.9712747,9.29217772 18.7800718,9.24374442 18.6020093,9.20781437 C18.1650683,9.11964695 17.866986,9.13404672 17.8708729,9.12883255 Z M6,8.16 C5.37196679,8.16 4.82498944,8.59464414 4.60412702,9.21721386 C4.88451676,9.09732834 5.12040034,8.88204006 5.26573503,8.60059068 C5.44515315,8.25313668 5.92341081,8.24407677 6.12587187,8.55155253 L6.17040883,8.63500332 C6.18526585,8.67008238 6.27589982,8.77995226 6.49606728,8.91521486 C6.72466608,9.05565734 7.02487672,9.16999589 7.40681048,9.24660732 C7.19218041,8.60841102 6.63790181,8.16 6,8.16 Z M16.9925008,7.99994376 C16.7238576,8 16.5,8.22385763 16.5,8.5 L16.5,8.5 L16.5,8.87800003 L16.78,8.879 L16.8118428,8.84778267 C16.8447267,8.81238811 16.8826295,8.76867343 16.9255205,8.71608783 L17.0691271,8.53116745 C17.3982589,8.08964909 17.9775937,8.06166257 18.799806,8.22757131 C19.0080712,8.26959576 19.226195,8.32484834 19.4496498,8.39015024 L19.4825147,8.39857469 C19.4246368,8.18618758 19.2294249,8.02999074 18.9925008,8.02994376 L18.9925008,8.02994376 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >سرگرمی و خدمات خانواده</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >خدمات نگهداری نوزاد و کودک</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >تخته های بازی و بازیهای فکری</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >شبکه&zwnj;های تلوزیونی ویژه کودک</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Cleaning-services"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M8.91126971,11.3000016 C9.97913136,11.3027134 11.0068387,11.7073226 11.7388814,12.3918977 C11.9927747,12.5716199 12.2891205,12.682076 12.550025,12.71 L12.550025,12.71 L15.4811934,12.7102797 C16.347187,12.7303258 17.16,13.1066282 17.1534915,14.1295876 L17.1534915,14.1295876 L17.2011134,14.0869976 C17.3044661,13.9831171 17.4020338,13.8687544 17.4932969,13.7439242 L17.4932969,13.7439242 L17.6253981,13.5488302 L18.9364266,12.0665844 C19.2303462,11.76243 19.624014,11.5708513 20.0483554,11.5291128 C20.5257394,11.482157 21.0019952,11.6287722 21.3774653,11.9421555 C22.1790405,12.636854 22.0556295,13.6350315 21.2897545,14.6331956 C21.0713754,14.9049562 20.9234868,15.0945268 20.7946445,15.2678126 L20.7946445,15.2678126 L19.935063,16.4695956 L19.1890591,17.4712505 C18.0486591,18.9819102 16.894031,19.577824 15.9458394,19.6101826 L15.9458394,19.6101826 L8.58917806,19.609765 C8.6835993,20.2219118 8.38838349,20.8531018 7.80460448,21.1667134 L7.80460448,21.1667134 L5.56595082,22.2922934 L1.33061406,13.7769198 L3.56559561,12.6531861 C4.22603692,12.3214911 5.01533828,12.5233612 5.44190754,13.0973779 L5.72502105,12.8635357 C5.92540649,12.7026206 6.13417451,12.5439854 6.34825062,12.3921584 C6.74698014,12.1093715 7.13673049,11.8698784 7.51048794,11.6870941 C8.01920873,11.4383065 8.48524634,11.3000016 8.91126971,11.3000016 Z M4.68440439,13.7668139 C4.55961657,13.5216574 4.26023116,13.4233518 4.01460448,13.5467134 L4.01460448,13.5467134 L2.669,14.222 L6.013,20.948 L7.34327829,20.2795879 C7.55531523,20.1656179 7.65243741,19.9200066 7.58444568,19.693833 L7.58444568,19.693833 L7.55111102,19.6102242 Z M8.91,12.3 C8.66279728,12.3 8.33379095,12.3976396 7.94981154,12.5854229 C7.62986294,12.7418923 7.28457911,12.9540617 6.92674938,13.2078416 C6.63098855,13.4176011 6.34390951,13.6432922 6.07763585,13.8689478 L6.07763585,13.8689478 L6.01,13.925 L8.198,18.61 L15.9286411,18.6104789 C16.5242243,18.5899671 17.3365525,18.1866548 18.2320717,17.0727619 L18.2320717,17.0727619 L18.3909409,16.8687495 C18.6273307,16.5556098 18.8275799,16.2874211 19.0014105,16.0515576 L19.0014105,16.0515576 L19.3520494,15.5700875 L19.9905019,14.6733581 C20.0452098,14.5997417 20.1027647,14.5238583 20.1663084,14.441672 L20.1663084,14.441672 L20.5032843,14.0156702 C20.9803327,13.3938035 21.0331009,12.9670019 20.7296804,12.703921 C20.5671238,12.568294 20.3569327,12.5035867 20.1462436,12.5243102 C19.9355546,12.5450337 19.741999,12.6494538 19.5946019,12.8311698 L19.5946019,12.8311698 L18.4264008,14.1411175 C17.9686094,14.8886838 17.254463,15.4395772 16.4027936,15.7000251 L16.4027936,15.7000251 L16.2686002,15.7354441 C15.6780164,15.8913227 15.376795,15.0543184 15.9312727,14.7981118 L15.9312727,14.7981118 L15.9723403,14.771345 L16.0189038,14.731882 C16.1377823,14.6179984 16.1929844,14.4528951 16.16,14.21 L16.16,14.21 L16.1506458,14.112984 C16.0953376,13.839076 15.8021678,13.7179642 15.4695974,13.7101458 L15.4695974,13.7101458 L12.5012933,13.707622 C12.0187538,13.6603915 11.5568517,13.488228 11.1100636,13.1666651 C10.5112243,12.6114791 9.72533038,12.3020721 8.91,12.3 Z M17.37,4.93 C17.9901686,4.93 18.5847466,5.17722417 19.0220693,5.61693656 C19.4096806,6.00666604 19.6466352,6.52046545 19.6933938,7.08912782 L19.6726677,6.90645908 C20.1615824,7.1366508 20.5,7.63380457 20.5,8.21 C20.5,9.00529004 19.85529,9.65 19.06,9.65 L19.06,9.65 L12.94,9.65 C12.14471,9.65 11.5,9.00529004 11.5,8.21 C11.5,7.63419442 11.8379598,7.13732357 12.3263402,6.90692669 C12.4007197,6.42290456 12.6271217,5.96966261 12.9779307,5.61693656 C13.4152534,5.17722417 14.0098314,4.93 14.63,4.93 L14.63,4.93 Z M19.06,7.77 L12.94,7.77 C12.6969947,7.77 12.5,7.96699471 12.5,8.21 C12.5,8.45300529 12.6969947,8.65 12.94,8.65 L12.94,8.65 L19.06,8.65 C19.3030053,8.65 19.5,8.45300529 19.5,8.21 C19.5,7.96699471 19.3030053,7.77 19.06,7.77 L19.06,7.77 Z M17.37,5.93 L14.63,5.93 C14.2759882,5.93 13.9365909,6.07112065 13.6869616,6.322114 C13.5799764,6.42968384 13.4932602,6.55363234 13.4292406,6.68803011 L13.4292406,6.68803011 L13.395,6.769 L18.605,6.769 C18.5543042,6.64040675 18.48662,6.52520204 18.4025295,6.42164133 L18.4025295,6.42164133 L18.3130384,6.322114 C18.0634091,6.07112065 17.7240118,5.93 17.37,5.93 L17.37,5.93 Z M16.2108527,1.63660523 L16.2881009,1.68134626 L20.2881009,4.50134626 C20.5137941,4.66045999 20.5677675,4.97240766 20.4086537,5.19810089 C20.2672193,5.39871709 20.0050272,5.46365339 19.7899968,5.36385628 L19.7118991,5.31865374 L16,2.701 L12.2881009,5.31865374 C12.0874847,5.46008816 11.8187168,5.43315749 11.6497167,5.26691522 L11.5913463,5.19810089 C11.4499118,4.99748468 11.4768425,4.72871682 11.6430848,4.55971672 L11.7118991,4.50134626 L15.7118991,1.68134626 C15.8599782,1.57695053 16.0506144,1.56203686 16.2108527,1.63660523 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >خدمات نظافت اتاق</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>خدمات خشکشویی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>خدمات خشک شویی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>امکان اتوی لباس در اتاق</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>دستگاه پولیش کفش</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>اتو پرس</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>خدمات خانه&zwnj;داری</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Business-Facilities"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M3.53539583,4.5 C4.27914131,4.50805583 4.98069195,4.84683284 5.44944672,5.4243194 C5.7907105,5.8447423 5.98278627,6.35989749 6.00602212,6.89060352 L8.815,6.89 L8.83044385,6.8646862 C9.70162967,5.42330243 10.4415501,4.83199854 11.9845285,4.78330554 L12.2,4.78 C13.6496337,4.78 14.6549094,5.17131485 16.2583279,6.13459523 C16.3523048,6.19132702 16.4324872,6.23969646 16.5027806,6.28200804 L16.5027806,6.28200804 L17.0710421,6.61790387 L17.1799629,6.68350954 C17.4428572,6.78492902 17.7173817,6.85057088 17.9961968,6.87928377 C18.0203646,6.3514799 18.2120797,5.84130488 18.5505533,5.4243194 C19.0193081,4.84683284 19.7208587,4.50805583 20.47,4.5 L20.47,4.5 L22,4.5 C22.2761424,4.5 22.5,4.72385763 22.5,5 L22.5,5 L22.5,14.9 C22.5,15.1761424 22.2761424,15.4 22,15.4 L22,15.4 L20.8811227,15.3998763 C20.2182089,15.4146268 19.6317218,14.9936764 19.4243163,14.3714788 L18.7812724,14.6118912 C18.8477774,14.7764734 18.8876022,14.9524071 18.8975246,15.1332151 C18.9220866,15.580789 18.7612488,16.0187251 18.4642848,16.3315281 C18.1478856,16.6887328 17.7107276,16.8765242 17.2677682,16.8869441 L17.2677682,16.8869441 L17.253,16.886 L17.2485178,16.9939875 C17.2229549,17.2542648 17.1313557,17.5078566 16.9751626,17.7379776 L16.9751626,17.7379776 L16.873707,17.8730994 C16.5540972,18.211906 16.1214145,18.3804502 15.6917407,18.3771091 L15.6917407,18.3771091 L15.589,18.371 L15.5626727,18.4963049 C15.5211303,18.6481037 15.4538595,18.7984818 15.3593877,18.9454238 L15.3593877,18.9454238 L15.2557944,19.0911457 C14.8004359,19.5271481 14.1481153,19.6361487 13.5942758,19.4181475 L13.5942758,19.4181475 L13.525,19.387 L13.3916766,19.4240329 C13.1751788,19.4673549 12.9061485,19.4534446 12.6075818,19.3961464 L12.6075818,19.3961464 L12.4713107,19.3674802 C11.8735764,19.231143 11.0488289,18.9162731 10.0957463,18.4642692 C8.21539497,17.5725036 6.08279174,16.273202 4.27957988,14.8873447 C3.99825435,15.2130626 3.58005281,15.4100928 3.13,15.4 L3.13,15.4 L2,15.4 C1.72385763,15.4 1.5,15.1761424 1.5,14.9 L1.5,14.9 L1.5,5 C1.5,4.72385763 1.72385763,4.5 2,4.5 L2,4.5 Z M8.219,7.89 L5.88,7.89 L4.675,13.928 L4.84498232,14.0605997 C6.29268386,15.1778617 7.96968746,16.2423117 9.54144454,17.0687284 L10.0610066,17.3351305 L10.5242537,17.5607308 C11.4171354,17.9841842 12.1795039,18.2752393 12.6936893,18.3925198 C12.8027189,18.4173883 12.8957419,18.4330532 12.9688632,18.4409911 L12.9688632,18.4409911 L12.99,18.442 L12.9993819,18.4225412 C13.1732865,18.1321304 13.6283172,18.1088025 13.8310088,18.3799064 L13.8310088,18.3799064 L13.867,18.439 L13.9382179,18.4789329 C14.1127504,18.5590253 14.3135234,18.5510818 14.4497565,18.4724059 L14.4497565,18.4724059 L14.5120745,18.4272538 C14.594937,18.3183404 14.6295363,18.1802232 14.6078045,18.0451084 C14.5985563,17.9876087 14.5793981,17.9324088 14.5675044,17.9089309 L14.5675044,17.9089309 L14.5181158,17.8319194 C14.2072621,17.3472066 14.8271954,16.8076286 15.2643957,17.1823717 L15.2643957,17.1823717 L15.3008384,17.2141733 C15.5422251,17.4390717 15.9199027,17.4268886 16.1238762,17.2123391 C16.2225276,17.0924262 16.2689771,16.9379636 16.252827,16.7835279 C16.2366768,16.6290922 16.1592759,16.4875813 16.0233961,16.3785893 L16.0233961,16.3785893 L12.6733961,13.4885893 C12.1686103,13.0531174 12.8215298,12.2960019 13.3264698,12.731295 L13.3264698,12.731295 L16.8057152,15.7306458 C17.075114,15.9619528 17.4802801,15.9342707 17.7271564,15.6559876 C17.846356,15.530263 17.9085203,15.3609994 17.899027,15.1880107 C17.8895337,15.015022 17.8092208,14.8535773 17.6734366,14.7386243 L17.71,14.774 L17.6738462,14.7489772 L11.913,9.791 L11.8064437,9.92815096 C11.7388345,10.0113859 11.6691526,10.094064 11.5975614,10.1756243 L11.5975614,10.1756243 L11.3772235,10.4163907 C10.8239723,10.995504 10.2670396,11.3956351 9.69638557,11.532613 C9.58866641,11.5584696 9.48160416,11.5743323 9.37576563,11.5798674 L9.21799645,11.5803828 C8.95681361,11.5681933 8.70505017,11.490414 8.47156225,11.3418307 C7.75178361,10.8837898 7.50296307,10.1753841 7.64380396,9.35819953 C7.71611237,8.93865298 7.88356008,8.51261597 8.12510897,8.06226832 L8.12510897,8.06226832 L8.17568533,7.96918181 C8.17812442,7.96475823 8.18055613,7.96035846 8.1829825,7.95597891 L8.219,7.89 Z M3.53,5.5 L2.5,5.5 L2.5,14.4 L3.14112275,14.4001237 C3.34139449,14.40458 3.52073997,14.2897378 3.60291221,14.1192893 C3.59942267,14.0828194 3.60268906,14.0463615 3.61007758,14.01012 L3.61007758,14.01012 L4.953,7.425 L4.97960417,7.29247088 C5.0569813,6.90340324 4.97679585,6.50166857 4.76048871,6.17384515 L4.6730347,6.05454505 C4.39178184,5.70805312 3.97085145,5.50478691 3.53,5.5 L3.53,5.5 Z M21.5,5.49997088 L20.4753958,5.49997088 C20.0291485,5.50478691 19.6082182,5.70805312 19.3269653,6.05454505 C19.0457124,6.40103699 18.9333466,6.85476978 19.0203464,7.2922226 L19.0193408,7.28730844 L20.3393408,13.5773084 C20.3580112,13.6662755 20.3517429,13.7553479 20.3248371,13.8367169 L20.3588773,14.0051237 C20.4091981,14.2396927 20.6190308,14.4054606 20.87,14.4 L20.87,14.4 L21.5,14.4 L21.5,5.49997088 Z M12.2,5.78 C10.8716888,5.78 10.3800232,6.18766573 9.57482226,7.5698947 L9.57482226,7.5698947 L9.531,7.641 L9.53096711,7.64351006 L9.32513257,7.99317731 C9.2442406,8.12384896 9.18769857,8.21612053 9.13980293,8.2973078 L9.13980293,8.2973078 L9.00635162,8.53493247 C8.81119801,8.89877999 8.68035006,9.2316963 8.62927478,9.52804438 C8.5523598,9.97431909 8.65803659,10.2751867 9.00843775,10.4981693 C9.08909943,10.5494994 9.17266546,10.5769237 9.26497429,10.5814421 L9.36041363,10.5783621 L9.36041363,10.5783621 L9.46297893,10.5602338 C9.80374882,10.4784365 10.222088,10.1778787 10.6541556,9.72561372 C10.8509775,9.51959131 11.036866,9.29708417 11.2049948,9.07453974 C11.2450986,9.0214563 11.2805125,8.97335194 11.3108529,8.93125726 L11.3108529,8.93125726 L11.4118429,8.78587479 C11.4302369,8.75781615 11.4509068,8.73226662 11.4734338,8.70928519 L11.5457133,8.64842167 C11.560327,8.63833194 11.5754029,8.62908421 11.5908652,8.62068936 C11.6159283,8.60704801 11.6424423,8.59550857 11.6696655,8.58633289 C11.7137827,8.5715279 11.7590825,8.56295895 11.8048013,8.56061775 C11.8808484,8.55691781 11.9566881,8.56993217 12.0275437,8.60045123 C12.0718456,8.61945421 12.1148889,8.64583591 12.1543837,8.67950665 L12.1543837,8.67950665 L14.3265634,10.5313757 L18.109,13.794 L19.214,13.381 L18.119,7.888 L18.0502425,7.88660833 C17.7955996,7.86929305 17.5398179,7.82756221 17.2812976,7.75971749 L17.0218053,7.68310524 L16.7601318,7.58870633 L16.4013589,7.38533894 L15.4589444,6.823469 C14.1665099,6.07116137 13.3423676,5.78 12.2,5.78 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >امکانات هماهنگی جلسات تجاری</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >امکانات برگزاری جلسات و ضیافت</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>دفتر کار</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>امکانت فکس و کپی</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="Shops"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M19.2787132,1.49999164 C19.9235859,1.4983387 20.4973517,1.90903566 20.7044307,2.52215359 L20.7044307,2.52215359 L22.4744307,7.84215023 C22.4910348,7.89205611 22.4993517,7.9422095 22.5002921,7.99134795 C22.5,9.30588222 21.6656226,10.4168852 20.5009007,10.8289758 L20.5,20 C20.5,21.3254834 19.4684641,22.4100387 18.1643757,22.4946823 L18,22.5 L6,22.5 C4.6745166,22.5 3.58996133,21.4684641 3.50531768,20.1643757 L3.5,20 L3.50008893,10.8293257 C2.3348501,10.4175144 1.5,9.30625206 1.5,8 C1.5,7.99761358 1.50001672,7.99523107 1.50005004,7.99285258 C1.500425,7.94356504 1.50874086,7.89273051 1.52556928,7.84215023 L1.52556928,7.84215023 L3.29629067,2.52000167 C3.50264831,1.90903566 4.0764141,1.4983387 4.72,1.49999164 L4.72,1.49999164 Z M16.9986056,9.65679853 L16.9405269,9.74505371 C16.3962545,10.5048863 15.5059472,11 14.5,11 C13.4560436,11 12.5366311,10.4667643 11.9992724,9.65780276 C11.8907341,9.82317873 11.7639497,9.97869102 11.6213203,10.1213203 C11.0587112,10.6839295 10.2956495,11 9.5,11 C8.45604361,11 7.53663109,10.4667643 6.99927242,9.65780276 C6.89073411,9.82317873 6.76394967,9.97869102 6.62132034,10.1213203 C6.05871121,10.6839295 5.29564947,11 4.5,11 L4.5,11 L4.5,20 C4.5,20.7796961 5.09488808,21.4204487 5.85553999,21.4931334 L6,21.5 L6,15 C6,14.1715729 6.67157288,13.5 7.5,13.5 L7.5,13.5 L10.5,13.5 C11.3284271,13.5 12,14.1715729 12,15 L12,15 L12,21.4999867 L18,21.5 C18.7796961,21.5 19.4204487,20.9051119 19.4931334,20.14446 L19.5,20 L19.5,11 C18.4556117,11 17.5358703,10.4663229 16.9986056,9.65679853 Z M10.5,14.5 L7.5,14.5 C7.22385763,14.5 7,14.7238576 7,15 L7,15 L7,21.5 L11,21.5 L11,15 C11,14.7545401 10.8231248,14.5503916 10.5898756,14.5080557 L10.5898756,14.5080557 L10.5,14.5 Z M16.5,13.5 C17.3284271,13.5 18,14.1715729 18,15 L18,15 L18,17 C18,17.8284271 17.3284271,18.5 16.5,18.5 L16.5,18.5 L14.5,18.5 C13.6715729,18.5 13,17.8284271 13,17 L13,17 L13,15 C13,14.1715729 13.6715729,13.5 14.5,13.5 L14.5,13.5 Z M16.5,14.5 L14.5,14.5 C14.2238576,14.5 14,14.7238576 14,15 L14,15 L14,17 C14,17.2761424 14.2238576,17.5 14.5,17.5 L14.5,17.5 L16.5,17.5 C16.7761424,17.5 17,17.2761424 17,17 L17,17 L17,15 C17,14.7238576 16.7761424,14.5 16.5,14.5 L16.5,14.5 Z M6.435,8.5 L2.564,8.5 L2.58467806,8.57762643 C2.81875551,9.35485996 3.51299396,9.93270782 4.35073766,9.99451426 L4.35073766,9.99451426 L4.5,10 C5.03043298,10 5.53914081,9.78928632 5.91421356,9.41421356 C6.16426207,9.16416506 6.34126209,8.85472319 6.43147894,8.51904645 L6.43147894,8.51904645 L6.435,8.5 Z M16.435,8.5 L12.564,8.5 L12.5846781,8.57762643 C12.8187555,9.35485996 13.512994,9.93270782 14.3507377,9.99451426 L14.3507377,9.99451426 L14.5,10 C15.4037387,10 16.1674752,9.40057958 16.4153219,8.57762643 L16.4153219,8.57762643 L16.435,8.5 Z M11.435,8.5 L7.564,8.5 L7.58467806,8.57762643 C7.81875551,9.35485996 8.51299396,9.93270782 9.35073766,9.99451426 L9.35073766,9.99451426 L9.5,10 C10.030433,10 10.5391408,9.78928632 10.9142136,9.41421356 C11.1642621,9.16416506 11.3412621,8.85472319 11.4314789,8.51904645 L11.4314789,8.51904645 L11.435,8.5 Z M21.435,8.5 L17.564,8.5 L17.5846781,8.57762643 C17.8187555,9.35485996 18.512994,9.93270782 19.3507377,9.99451426 L19.3507377,9.99451426 L19.5,10 C20.4037387,10 21.1674752,9.40057958 21.4153219,8.57762643 L21.4153219,8.57762643 L21.435,8.5 Z M19.2812868,2.49999331 L4.71871324,2.49999331 C4.50375273,2.49944178 4.31249549,2.63634218 4.24443072,2.83784641 L4.24443072,2.83784641 L2.693,7.499 L21.306,7.499 L19.7562907,2.83999833 C19.6973311,2.66543591 19.5483928,2.53991854 19.3716735,2.50796731 L19.3716735,2.50796731 L19.2812868,2.49999331 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p
-                            class="mb-0 notice text-darker"
-                            data-v-539448ea
-                            data-v-1150f8fd
-                          >فروشگاه ها</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>خدمات ارایشگاه و زیبایی</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >فروشگاه برای خرید سوغاتی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>مغازه در محل</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>فروشگاه محلی کوچک</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div data-v-539448ea data-v-1150f8fd>
-                        <svg
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          height="36px"
-                          width="36px"
-                          fill
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 24 24"
-                          class="svg-icon"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <g
-                            id="misc"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                          >
-                            <path
-                              d="M4,9.5 C5.38071187,9.5 6.5,10.6192881 6.5,12 C6.5,13.3807119 5.38071187,14.5 4,14.5 C2.61928813,14.5 1.5,13.3807119 1.5,12 C1.5,10.6192881 2.61928813,9.5 4,9.5 Z M12,9.5 C13.3807119,9.5 14.5,10.6192881 14.5,12 C14.5,13.3807119 13.3807119,14.5 12,14.5 C10.6192881,14.5 9.5,13.3807119 9.5,12 C9.5,10.6192881 10.6192881,9.5 12,9.5 Z M20,9.5 C21.3807119,9.5 22.5,10.6192881 22.5,12 C22.5,13.3807119 21.3807119,14.5 20,14.5 C18.6192881,14.5 17.5,13.3807119 17.5,12 C17.5,10.6192881 18.6192881,9.5 20,9.5 Z M4,10.5 C3.17157288,10.5 2.5,11.1715729 2.5,12 C2.5,12.8284271 3.17157288,13.5 4,13.5 C4.82842712,13.5 5.5,12.8284271 5.5,12 C5.5,11.1715729 4.82842712,10.5 4,10.5 Z M12,10.5 C11.1715729,10.5 10.5,11.1715729 10.5,12 C10.5,12.8284271 11.1715729,13.5 12,13.5 C12.8284271,13.5 13.5,12.8284271 13.5,12 C13.5,11.1715729 12.8284271,10.5 12,10.5 Z M20,10.5 C19.1715729,10.5 18.5,11.1715729 18.5,12 C18.5,12.8284271 19.1715729,13.5 20,13.5 C20.8284271,13.5 21.5,12.8284271 21.5,12 C21.5,11.1715729 20.8284271,10.5 20,10.5 Z"
-                              id="Combined-Shape"
-                              fill="#757575"
-                              fill-rule="nonzero"
-                            />
-                          </g>
-                        </svg>
-                        <div
-                          class="inline-block hotel-facilities mb-4 pr-3"
-                          data-v-539448ea
-                          data-v-1150f8fd
-                        >
-                          <p class="mb-0 notice text-darker" data-v-539448ea data-v-1150f8fd>متفرقه</p>
-                          <ul class="list-inline" data-v-539448ea data-v-1150f8fd>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>اتاق سیگار ممنوع</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >امکانات ویژه برای معلولان</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >اتاق&zwnj;های مناسب خانواده</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>امکانات اتاق درجه یک</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >سوئیت مخصوص عروس و داماد</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>آسانسور</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>اتاق&zwnj;های عایق صدا</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>سیستم گرمایشی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>اتاق ضد حساسیت</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >ممنوعیت نکشیدن سیگار در تمام مکانهای هتل</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>تهویه مطبوع</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>اتاق ویژه سیگار</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >محل قابل دسترسی برای ویلچر</li>
-                            <li
-                              class="ml-5"
-                              data-v-539448ea
-                              data-v-1150f8fd
-                            >دستگیره کمکی در سرویس بهداشتی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>سروی</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>دستشویی کوتاه</li>
-                            <li class="ml-5" data-v-539448ea data-v-1150f8fd>طناب اضطراری در حمام</li>
+                            <li class="ml-5" data-v-539448ea data-v-1150f8fd v-for="f in hotel.feature" :key="f.id">{{f.name}}: {{f.value}}</li>
                           </ul>
                         </div>
                       </div>
@@ -3162,31 +2183,23 @@
 </template>
 
 <script>
-import axios from "axios";
+//import axios from "axios";
 
 export default {
   data() {
     return {
-      open: false
+      open: false,
+      hotel:{}
     };
   },
-  async asyncData({ route, params }) {
-    let headers = {
-      //Authorization: "bearer " + state.user.token,
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "application/json"
-    };
-    let url = "http://37.152.185.50:8080/hotels/hotel/" + params.id;
-    await axios({
+  async asyncData({ route, params,$axios }) {
+    return await $axios({
       method: "get",
-      headers: headers,
-      url: url
+      url: "/hotels/" + params.id
     })
       .then(data => {
           console.log(data.data)
-        return {
-          hotel: data.data
-        };
+        return { hotel: data.data }
       })
       .catch(e => console.log(e));
   },

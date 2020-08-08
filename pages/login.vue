@@ -64,13 +64,13 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <form novalidate="novalidate" class="user-menu__login-form p-0">
+                                            <form @submit.prevent="Login" novalidate="novalidate" class="user-menu__login-form p-0">
                                                 <div class="form-group"><label for="modal-login-email">ایمیل یا شماره
                                                         همراه خود را وارد کنید</label> <input type="email" name="email"
-                                                        id="modal-login-email" tabindex="10" dir="ltr"
+                                                        id="modal-login-email" v-model="login.username" tabindex="10" dir="ltr"
                                                         class="form-control"></div>
                                                 <div class="form-group"><label for="modal-login-password">رمز عبور خود
-                                                        را وارد کنید</label> <input type="password" name="password"
+                                                        را وارد کنید</label> <input type="password" v-model="login.password" name="password"
                                                         id="modal-login-password" dir="ltr"
                                                         autocomplete="current-password" class="form-control">
                                                     <!---->
@@ -159,12 +159,12 @@
                                                    
                                                 </div>
                                             </div>
-                                            <form action="#" method="post" novalidate="novalidate" autocomplete="off"
+                                            <form @submit.prevent="Register" method="post" novalidate="novalidate" autocomplete="off"
                                                 class="validated-form signup-form">
                                                 <div>
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group"><label for="email">ایمیل
-                                                                (الزامی)</label> <input type="email" dir="ltr"
+                                                                (الزامی)</label> <input type="email" v-model="register.Email" dir="ltr"
                                                                 id="email" name="email" autofocus="autofocus"
                                                                 class="form-control">
                                                             <!---->
@@ -172,14 +172,14 @@
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group"><label for="phone">تلفن همراه
-                                                                (الزامی)</label> <input type="tel" dir="ltr" id="phone"
+                                                                (الزامی)</label> <input v-model="register.Mobile" type="tel" dir="ltr" id="phone"
                                                                 name="phone" class="form-control">
                                                             <!---->
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group"><label for="password">رمز عبور
-                                                                (الزامی)</label> <input type="password" dir="ltr"
+                                                                (الزامی)</label> <input type="password" v-model="register.Password" dir="ltr"
                                                                 id="password" name="password" class="form-control">
                                                             <!---->
                                                         </div>
@@ -194,6 +194,12 @@
                                                     </div>
                                                     <div class="col-xs-12">
                                                         <div class="form-group">
+                                                            <div class="subscribe-news-letter"><input v-model="register.HotelManager" type="checkbox"
+                                                                    id="subscribe-news"> <label for="subscribe-news"
+                                                                    class="rules-accepted-sign-up">
+                                                                    ثبت نام به عنوان مدیریت هتل
+                                                                </label></div>
+                                                                <hr>
                                                             <div><input type="checkbox" id="rules-accepted"> <label
                                                                     for="rules-accepted"
                                                                     class="rules-accepted-sign-up"><span><a
@@ -232,16 +238,67 @@
 </template>
 
 <script>
+const Cookie = process.client ? require("js-cookie") : undefined;
+
 export default {
   data() {
     return {
-      form: "login"
+      form: "login",
+      login:{      
+        username: "",
+        password: ""
+      },
+      register:{      
+        Email: "",
+        Mobile: "",
+        Password: "",
+        HotelManager:false
+      }
     };
   },
+  mounted(){
+        if(Cookie.get('auth') !== undefined){
+            this.$router.push("/Profile");
+        }
+    },
   methods: {
     changeform(form) {
       this.form = form;
-    },   
+    },
+    async Login(name) {
+      await this.$axios({
+        method: "post",
+        url: 'Users/Login',
+        data: this.login
+      })
+        .then((data) => {      
+         Cookie.set("auth", data.data.id); // saving token in cookie for server rendering   
+         Cookie.set("hm", data.data.HotelManager);
+         this.$toast.success("Successful Login");
+          this.$router.push("/Profile");
+        })
+        .catch((e) => {
+            console.log(e)
+            this.$toast.error(e);
+        });
+    },
+    async Register(name) {
+      await this.$axios({
+        method: "post",
+        url: 'users',
+        data: this.register
+      })
+        .then((data) => {      
+         Cookie.set("auth", data.data.id); // saving token in cookie for server rendering   
+         Cookie.set("hm", this.register.HotelManager);
+         this.$toast.success("Successful Register");
+          this.$router.push("/Profile");
+        })
+        .catch((e) => {
+            console.log(e)
+            this.$toast.error(e);
+        });
+    }  
   }
 };
 </script>

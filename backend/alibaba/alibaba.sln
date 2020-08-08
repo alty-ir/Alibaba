@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alibaba", "alibaba\alibaba.csproj", "{29AC2DCF-E3A5-4603-87FD-6E0250839E85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29AC2DCF-E3A5-4603-87FD-6E0250839E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29AC2DCF-E3A5-4603-87FD-6E0250839E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29AC2DCF-E3A5-4603-87FD-6E0250839E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29AC2DCF-E3A5-4603-87FD-6E0250839E85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81465F37-84B7-43F5-80CB-224336D54EBB}
+	EndGlobalSection
+EndGlobal
