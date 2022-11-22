@@ -17,7 +17,7 @@
     "@nuxtjs/toast": "^3.3.1",
     "axios": "^0.19.2",
     "js-cookie": "^2.2.1",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "v-calendar": "^1.0.8",
     "vuejs-datepicker": "^1.6.2"
   },
